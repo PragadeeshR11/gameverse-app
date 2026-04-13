@@ -27,9 +27,6 @@ body{
     font-family: "Audiowide", sans-serif;
 }
 
-img {
-  @apply h-12 w-12;
-}
 
 button:hover{
   cursor: pointer;
@@ -37,7 +34,12 @@ button:hover{
 }
 
   
-
+.signup:hover, .explr:hover{
+  background-color: #ced4da;
+  color:#212529;
+  transition: all 0.3s;
+  
+}
 
 
 
