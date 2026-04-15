@@ -1,0 +1,56 @@
+export default [
+  {
+    id: '1',
+    title: 'CyberPunk2077',
+    img: './src/assets/gameImg/cyberpunk2077.jpg',
+    year: '2020',
+  },
+  {
+    id: '2',
+    title: 'WWE 2K26',
+    img: './src/assets/gameImg/2k26.jpg',
+    year: '2026',
+  },
+  {
+    id: '3',
+    title: "Assassin's Creed : Shadows",
+    img: './src/assets/gameImg/acshadows.jpg',
+    year: '2025',
+  },
+  {
+    id: '4',
+    title: 'CallofDuty : BO7',
+    img: './src/assets/gameImg/cod.jpg',
+    year: '2026',
+  },
+  {
+    id: '5',
+    title: 'EldenRing',
+    img: './src/assets/gameImg/eldenring.jpg',
+    year: '2022',
+  },
+  {
+    id: '6',
+    title: 'ResidentEvil : Requiem',
+    img: './src/assets/gameImg/residentevilrequiem.jpg',
+    year: '2026',
+  },
+  {
+    id: '7',
+    title: 'GTA 6',
+    img: './src/assets/gameImg/gta6.jpg',
+    year: 'Comming Soon',
+  },
+  {
+    id: '8',
+    title: 'HitMan',
+    img: './src/assets/gameImg/hitman.jpg',
+    year: '2023',
+  },
+  {
+    id: '9',
+    title: 'NFS : Unbound',
+    img: './src/assets/gameImg/nfs.jpg',
+    year: '2022',
+  },
+];

@@ -1,9 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-body{
+body {
   /* @apply min-h-screen bg-gradient-to-br from-[#050507] via-[#12061f] to-[#1d0630]; */
   @apply text-amber-50;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 /* bg-layout */
 .app-bg {
@@ -13,7 +13,7 @@ body{
 
 /* Neon glow overlay */
 .app-bg::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background:
@@ -24,22 +24,40 @@ body{
 }
 
 .audiowide {
-    font-family: "Audiowide", sans-serif;
+  font-family: 'Audiowide', sans-serif;
 }
 
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 
-button:hover{
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* button */
+button:hover {
   cursor: pointer;
   color: #f8f9fa;
 }
 
-  
-.signup:hover, .explr:hover{
+.actionBtn:hover {
   background-color: #ced4da;
-  color:#212529;
+  color: #212529;
   transition: all 0.3s;
-  
 }
 
+/* section */
+section {
+  @apply mb-36;
+}
 
+.sec-head {
+  @apply text-3xl text-left font-semibold tracking-wider uppercase text-[#dee2e6] mx-6 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
+}
 
+.gameCards {
+  @apply flex gap-6 overflow-x-auto mx-6 my-8;
+}

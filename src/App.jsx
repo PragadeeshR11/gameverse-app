@@ -1,16 +1,17 @@
-import Hero from './componenets/Hero'
-import Layout from './componenets/Layout'
-import './App.css'
+import Hero from './componenets/Hero';
+import Layout from './componenets/Layout';
+import Popular from './componenets/Popular';
+import './App.css';
 
 function App() {
-
   return (
     <>
-    <Layout>
-      <Hero />
-    </Layout>
+      <Layout>
+        <Hero />
+        <Popular />
+      </Layout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
