@@ -1,4 +1,4 @@
-export default [
+export const games = [
   {
     id: '1',
     title: 'CyberPunk2077',
@@ -52,5 +52,26 @@ export default [
     title: 'NFS : Unbound',
     img: './src/assets/gameImg/nfs.jpg',
     year: '2022',
+  },
+];
+
+export const exploreItems = [
+  {
+    title: 'Discover Worlds',
+    description:
+      'Dive into vast, cinematic universes filled with endless exploration, stunning environments, and unforgettable adventures across genres.',
+    img: './src/assets/gameImg/exploreimg1.png',
+  },
+  {
+    title: 'Immersive Gameplay',
+    description:
+      'Experience fluid mechanics, intense action, and responsive controls that bring every moment to life with precision and depth.',
+    img: './src/assets/gameImg/exploreimg2.jpg',
+  },
+  {
+    title: 'Next-Gen Experience',
+    description:
+      'Powered by modern design and seamless performance, enjoy a refined interface that elevates how you explore and interact with games.',
+    img: './src/assets/gameImg/exploreimg3.jpg',
   },
 ];

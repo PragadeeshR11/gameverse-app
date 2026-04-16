@@ -2,7 +2,7 @@
 
 body {
   /* @apply min-h-screen bg-gradient-to-br from-[#050507] via-[#12061f] to-[#1d0630]; */
-  @apply text-amber-50;
+  @apply text-amber-50 box-border;
   font-family: 'Inter', sans-serif;
 }
 /* bg-layout */
@@ -55,9 +55,9 @@ section {
 }
 
 .sec-head {
-  @apply text-3xl text-left font-semibold tracking-wider uppercase text-[#dee2e6] mx-6 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
+  @apply text-3xl text-left font-semibold tracking-wider uppercase text-[#dee2e6] mx-16 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
 }
 
 .gameCards {
-  @apply flex gap-6 overflow-x-auto mx-6 my-8;
+  @apply flex gap-6 overflow-x-auto mx-16 my-8;
 }

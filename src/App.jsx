@@ -1,6 +1,7 @@
 import Hero from './componenets/Hero';
 import Layout from './componenets/Layout';
 import Popular from './componenets/Popular';
+import Explore from './componenets/Explore';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Layout>
         <Hero />
         <Popular />
+        <Explore />
       </Layout>
     </>
   );
