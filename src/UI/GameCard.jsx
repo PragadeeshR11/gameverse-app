@@ -6,7 +6,7 @@ export default function GameCard({ game }) {
     >
       <img
         src={game.img}
-        className="w-full h-full object-cover rounded-lg  transition-all duration-300 group-hover:scale-105 group-hover:brightness-75 "
+        className="w-full h-full object-cover rounded-lg  transition-all duration-300 group-hover:scale-105 group-hover:brightness-75"
       />
       <div
         className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent 

@@ -3,7 +3,7 @@ import Logo from '../assets/logo/gameverselogo.png';
 export default function Hero() {
   return (
     <section id="hero">
-      <div className="header w-screen my-8  grid grid-cols-[0.75fr_3fr_0.75fr] items-center">
+      <div className="header w-full py-8  grid grid-cols-[0.75fr_3fr_0.75fr] items-center">
         <div className="logo justify-self-end">
           <button className="transition-all duration-300 hover:scale-110 cursor-pointer">
             <img src={Logo} alt="gameverse-logo" className="w-12 h-12" />
