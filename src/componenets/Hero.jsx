@@ -11,7 +11,7 @@ export default function Hero() {
         </div>
         <div className="navbar text-lg font-light text-[#868e96] justify-self-center">
           <ul className="btn flex gap-8">
-            <button>Popular</button>
+            {/* <button>Popular</button> */}
             <button>Explore</button>
             <button>Categories</button>
             <button>Subsriptions</button>
