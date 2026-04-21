@@ -35,7 +35,7 @@ export default function Explore() {
   return (
     <section id="explore" ref={explRef} className="h-[300vh] relative">
       <ExplrLayout>
-        <h2 className="sec-head audiowide mt-6">
+        <h2 className="sec-head mt-6">
           Xplore <br />
           and Xperience
         </h2>

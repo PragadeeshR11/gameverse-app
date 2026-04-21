@@ -1,3 +1,6 @@
+import { FiTriangle } from 'react-icons/fi';
+import { FaRegSquare, FaRegCircle, FaTimes } from 'react-icons/fa';
+
 export const games = [
   {
     id: '1',
@@ -73,5 +76,32 @@ export const exploreItems = [
     description:
       'Powered by modern design and seamless performance, enjoy a refined interface that elevates how you explore and interact with games.',
     img: './src/assets/gameImg/exploreimg3.jpg',
+  },
+];
+
+export const genres = [
+  {
+    icon: FaTimes,
+    title: 'Action',
+    description: 'Fast-paced combat, intense mechanics, and adrenaline-driven gameplay.',
+    img: '',
+  },
+  {
+    icon: FaRegSquare,
+    title: 'Adventure',
+    description: 'Explore vast worlds, uncover stories, and embark on immersive journeys.',
+    img: '',
+  },
+  {
+    icon: FiTriangle,
+    title: 'Shooter',
+    description: 'Precision aiming, tactical movement, and high-stakes firefights.',
+    img: '',
+  },
+  {
+    icon: FaRegCircle,
+    title: 'RPG',
+    description: 'Character progression, deep narratives, and choice-driven experiences.',
+    img: '',
   },
 ];

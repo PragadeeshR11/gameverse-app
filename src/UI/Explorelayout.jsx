@@ -1,4 +1,4 @@
-export default function ExploreLayout({ exploreItems, activeSec, offset }) {
+export default function ExploreLayout({ exploreItems, activeSec }) {
   return (
     <div className="flex w-full gap-12">
       <div className="lpan w-1/5 max-w-[420px] pr-12 py-2 ml-10">
