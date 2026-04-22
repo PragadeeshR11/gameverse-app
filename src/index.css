@@ -2,25 +2,8 @@
 
 html,
 body {
-  /* @apply min-h-screen bg-gradient-to-br from-[#050507] via-[#12061f] to-[#1d0630]; */
   @apply text-amber-50 box-border m-0 p-0;
   font-family: 'Inter', sans-serif;
-}
-/* bg-layout */
-.app-bg {
-  @apply relative min-h-screen;
-  background: linear-gradient(135deg, #050507, #12061f, #1d0630);
-}
-
-.app-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(236, 72, 153, 0.12), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.12), transparent 40%);
-  pointer-events: none;
-  z-index: 0;
 }
 
 .audiowide {
@@ -61,4 +44,13 @@ section {
 
 .gameCards {
   @apply flex gap-6 overflow-x-auto mx-16 my-8;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }

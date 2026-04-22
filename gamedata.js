@@ -81,27 +81,32 @@ export const exploreItems = [
 
 export const genres = [
   {
+    id: '1',
     icon: FaTimes,
     title: 'Action',
     description: 'Fast-paced combat, intense mechanics, and adrenaline-driven gameplay.',
-    img: '',
+    img: './src/assets/gameImg/readyornot-action.jpg',
   },
   {
+    id: '2',
     icon: FaRegSquare,
-    title: 'Adventure',
+    title: 'Fantasy',
     description: 'Explore vast worlds, uncover stories, and embark on immersive journeys.',
-    img: '',
+    img: './src/assets/gameImg/eldenring.jpg',
   },
   {
-    icon: FiTriangle,
-    title: 'Shooter',
-    description: 'Precision aiming, tactical movement, and high-stakes firefights.',
-    img: '',
-  },
-  {
+    id: '3',
     icon: FaRegCircle,
     title: 'RPG',
     description: 'Character progression, deep narratives, and choice-driven experiences.',
-    img: '',
+    img: './src/assets/gameImg/cyberpunk2077.jpg',
+  },
+  {
+    id: '4',
+    icon: FiTriangle,
+    title: 'Racing',
+    description:
+      'High-speed thrills, precision driving, and adrenaline-fueled competition on every track.',
+    img: './src/assets/gameImg/nfs-racing.jpg',
   },
 ];
