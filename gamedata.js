@@ -110,3 +110,40 @@ export const genres = [
     img: './src/assets/gameImg/nfs-racing.jpg',
   },
 ];
+
+export const plans = [
+  {
+    name: 'Plus',
+    description:
+      'Upgrade your gaming experience with extended access, enhanced performance, and exclusive in-game perks across platforms.',
+    monthly: 199,
+    yearly: 1999,
+    features: [
+      'Access to 200+ games',
+      'Cross-platform support',
+      'Online multiplayer access',
+      'Cloud save enabled',
+      'Standard performance priority',
+      'Exclusive in-game rewards',
+      'Ad-free experience',
+    ],
+  },
+
+  {
+    name: 'Ultimate',
+    description:
+      'Unlock the full GameVerse experience with unlimited access, premium benefits, and priority features designed for serious gamers.',
+    monthly: 399,
+    yearly: 3999,
+    features: [
+      'Unlimited access to all games',
+      'Cross-platform support',
+      'Priority multiplayer matchmaking',
+      'Advanced cloud saves & sync',
+      'High-performance priority servers',
+      'Exclusive early access to games',
+      'Premium in-game rewards & skins',
+      'Completely ad-free experience',
+    ],
+  },
+];

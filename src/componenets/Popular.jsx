@@ -5,7 +5,7 @@ export default function Popular() {
   return (
     <section id="popular">
       <h2 className="sec-head">Popular</h2>
-      <p className="text-gray-400 text-sm mx-16 mt-2">Trending games across all platforms</p>
+      <p className="sub-text">Trending games across all platforms</p>
 
       <div className="gameCards slide1 scrollbar-hide">
         {games.map((game) => (
