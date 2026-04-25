@@ -147,3 +147,21 @@ export const plans = [
     ],
   },
 ];
+
+export const masonary = [
+  './src/assets/masonary/masonary1.jpg',
+  './src/assets/masonary/masonary2.jpg',
+  './src/assets/masonary/masonary3.jpg',
+  './src/assets/masonary/masonary4.jpg',
+  './src/assets/masonary/masonary5.jpg',
+  './src/assets/masonary/masonary6.jpg',
+  './src/assets/masonary/masonary7.jpg',
+  './src/assets/masonary/masonary8.jpg',
+  './src/assets/masonary/masonary9.jpg',
+  './src/assets/masonary/masonary10.jpg',
+  './src/assets/masonary/masonary11.jpg',
+  './src/assets/masonary/masonary12.jpg',
+  './src/assets/masonary/masonary13.jpg',
+  './src/assets/masonary/masonary14.jpg',
+  './src/assets/masonary/masonary15.jpg',
+];

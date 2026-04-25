@@ -1,6 +1,6 @@
 import ExploreLayout from '../UI/Explorelayout.jsx';
 import { exploreItems } from '../../gamedata.js';
-import { ExplrLayout } from './Layouts.jsx';
+import { ExplrLayout } from '../UI/Layouts.jsx';
 import { useEffect, useState, useRef } from 'react';
 
 export default function Explore() {

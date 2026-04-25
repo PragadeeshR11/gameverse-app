@@ -1,13 +1,16 @@
 import { TiTick } from 'react-icons/ti';
 
-export default function SubCard({ plan }) {
+export default function SubCard({ plan, activePlan }) {
   return (
     <>
       <h2 className="font-semibold text-4xl text-gray-200 tracking-wider">{plan.name}</h2>
       <p className="font-extralight text-sm  text-gray-400 mt-3">Monthly price</p>
-      <p className="font-semibold text-4xl text-gray-200 tracking-wider py-1">
+      <p
+        key={activePlan ? 'yearly' : 'monthly'}
+        className="font-semibold text-4xl text-gray-200 tracking-wider py-1 animate-price"
+      >
         <span className="font-extralight text-gray-400 text-lg">$ </span>
-        {plan.monthly}
+        {!activePlan ? plan.monthly : plan.yearly}
       </p>
       <p className="font-thin text-xs  text-gray-400 tracking-normal">Pause or cancel anytime</p>
       <button
@@ -25,6 +28,14 @@ export default function SubCard({ plan }) {
           </li>
         ))}
       </ul>
+      {plan.name === 'Ultimate' && (
+        <label
+          className="absolute -top-3 -right-4 px-4 py-1 text-[11px] tracking-wider font-semibold rounded-full 
+          bg-[linear-gradient(135deg,rgba(213,45,110,0.9),rgba(139,44,159,0.9))] backdrop-blur-md text-white shadow-[0_0_20px_rgba(213,45,110,0.4)]"
+        >
+          Best Value
+        </label>
+      )}
     </>
   );
 }
