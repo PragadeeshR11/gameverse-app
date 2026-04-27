@@ -1,5 +1,15 @@
 @import 'tailwindcss';
 
+:root {
+  --text-muted: #9ca3af;
+}
+
+@layer utilities {
+  .text-muted {
+    color: var(--text-muted);
+  }
+}
+
 html,
 body {
   @apply text-amber-50 box-border m-0 p-0;
@@ -24,6 +34,7 @@ body {
 button:hover {
   cursor: pointer;
   color: #f8f9fa;
+  transition: all 0.3s;
 }
 
 .actionBtn:hover {
@@ -38,6 +49,10 @@ button:hover {
 /* section */
 section {
   @apply mb-36;
+}
+
+.col {
+  @apply mb-0;
 }
 
 .sec-head {

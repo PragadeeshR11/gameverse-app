@@ -6,6 +6,7 @@ import Explore from './componenets/Explore';
 import Categories from './componenets/Categories';
 import Subsription from './componenets/Subscription';
 import Collection from './componenets/Collection';
+import Footer from './componenets/Footer';
 
 function App() {
   return (
@@ -17,9 +18,7 @@ function App() {
         <Categories />
         <Subsription />
         <Collection />
-        {/* <section>
-          <h2 className="sec-head">dummy</h2>
-        </section> */}
+        <Footer />
       </Layout>
     </>
   );
