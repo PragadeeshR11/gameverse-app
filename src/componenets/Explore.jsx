@@ -15,7 +15,6 @@ export default function Explore() {
         1,
         Math.max(0, -rect.top / (rect.height - window.innerHeight))
       );
-
       // if (scrollProgress < 0.33) setActiveSec(0);
       // else if (scrollProgress < 0.66) setActiveSec(1);
       // else setActiveSec(2);

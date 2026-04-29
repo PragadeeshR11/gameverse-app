@@ -3,13 +3,13 @@ import Logo from '../assets/logo/gameverselogo.png';
 export default function Hero() {
   return (
     <section id="hero">
-      <div className="header w-full py-8 text-[17px] grid grid-cols-[0.75fr_3fr_0.75fr] items-center">
+      <div className="header w-full text-[17px] py-8 grid grid-cols-[0.75fr_3fr_0.75fr] items-center">
         <div className="logo justify-self-end">
           <button className="transition-all duration-300 hover:scale-110 cursor-pointer">
             <img src={Logo} alt="gameverse-logo" className="w-12 h-12" />
           </button>
         </div>
-        <div className="navbar  font-light text-[#868e96] justify-self-center">
+        <div className="navbar font-light text-[#868e96] justify-self-center">
           <ul className="btn flex gap-8">
             {/* <button>Popular</button> */}
             <button>Explore</button>
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="auth  font-light text-[#868e96] justify-self-start">
           <ul className="flex gap-3 ">
             <button>Login</button>
-            <button className="actionBtn bg-amber-50 text-[#212529] px-2.5 py-0.5 font-normal  rounded-2xl">
+            <button className="actionBtn bg-amber-50 text-[#212529] px-2.5 py-0.5 font-normal rounded-2xl">
               Sign up
             </button>
           </ul>

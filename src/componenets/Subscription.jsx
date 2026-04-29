@@ -1,7 +1,7 @@
-import { SubLayout } from '../UI/Layouts.jsx';
-import SubCard from '../UI/SubCard';
 import { plans } from '../../gamedata.js';
+import { SubLayout } from '../UI/Layouts.jsx';
 import { PlusCard, UltimateCard } from '../UI/Layouts.jsx';
+import SubCard from '../UI/SubCard';
 import { useState } from 'react';
 
 export default function Subsription() {
@@ -15,12 +15,11 @@ export default function Subsription() {
           Unlock seamless access to a wide range of games across platforms
         </p>
 
-        <div className="relative left-256 top-3 flex w-[180px] p-1 border border-pink-100 rounded-full over">
+        <div className="relative left-256 top-3 w-[180px] flex p-1 border border-pink-100 rounded-full">
           <div
-            className={`absolute top-1 bottom-1  w-[calc(50%-4px)] rounded-full bg-[#7f1c3e] transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+            className={`absolute top-1 bottom-1  w-[calc(50%-4px)] bg-[#7f1c3e] rounded-full transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
             ${isAnnual ? 'left-1/2' : 'left-1'}`}
           />
-
           <button
             className={`relative z-10 w-1/2 px-2.5 py-0.5 rounded-2xl  
                 ${!isAnnual ? 'text-white' : 'text-white/60'}`}
@@ -28,6 +27,7 @@ export default function Subsription() {
           >
             Monthly
           </button>
+
           <button
             className={`relative z-10 w-1/2 px-2.5 py-0.5 rounded-2xl  
                 ${isAnnual ? 'text-white' : 'text-white/60'}`}
@@ -36,8 +36,8 @@ export default function Subsription() {
             Annual
           </button>
         </div>
-        <div className="sub flex pt-18">
-          <div className="w-2/5 flex  justify-center mt-12">
+        <div className="flex pt-18">
+          <div className="w-2/5 flex justify-center mt-12">
             <p className="font-bold text-gray-300 text-[56px] leading-17 ">
               Pick <br /> your <br />
               <span className="bg-gradient-to-r from-[#d52d6e] to-[#8b2c9f] bg-clip-text text-transparent ">

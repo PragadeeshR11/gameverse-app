@@ -1,5 +1,6 @@
 import { FiTriangle } from 'react-icons/fi';
 import { FaRegSquare, FaRegCircle, FaTimes } from 'react-icons/fa';
+import { MdGames } from 'react-icons/md';
 
 export const games = [
   {
@@ -78,6 +79,7 @@ export const exploreItems = [
     img: './src/assets/gameImg/exploreimg3.jpg',
   },
 ];
+import { LuTriangle } from 'react-icons/lu';
 
 export const genres = [
   {
@@ -94,12 +96,13 @@ export const genres = [
     description: 'Explore vast worlds, uncover stories, and embark on immersive journeys.',
     img: './src/assets/gameImg/eldenring.jpg',
   },
+
   {
     id: '3',
     icon: FaRegCircle,
     title: 'RPG',
     description: 'Character progression, deep narratives, and choice-driven experiences.',
-    img: './src/assets/gameImg/cyberpunk2077.jpg',
+    img: './src/assets/gameImg/gta6-bike.jpg',
   },
   {
     id: '4',
@@ -108,6 +111,13 @@ export const genres = [
     description:
       'High-speed thrills, precision driving, and adrenaline-fueled competition on every track.',
     img: './src/assets/gameImg/nfs-racing.jpg',
+  },
+  {
+    id: '5',
+    icon: MdGames,
+    title: 'Explore Beyond Genres',
+    description: 'Endless genres. Infinite experiences - with one subscription',
+    img: './src/assets/gameImg/ps.jpg',
   },
 ];
 
