@@ -88,6 +88,7 @@ export const genres = [
     title: 'Action',
     description: 'Fast-paced combat, intense mechanics, and adrenaline-driven gameplay.',
     img: './src/assets/gameImg/readyornot-action.jpg',
+    textclr: '#a61e4d33',
   },
   {
     id: '2',
@@ -95,6 +96,7 @@ export const genres = [
     title: 'Fantasy',
     description: 'Explore vast worlds, uncover stories, and embark on immersive journeys.',
     img: './src/assets/gameImg/eldenring.jpg',
+    textclr: '#6741d933',
   },
 
   {
@@ -103,6 +105,7 @@ export const genres = [
     title: 'RPG',
     description: 'Character progression, deep narratives, and choice-driven experiences.',
     img: './src/assets/gameImg/gta6-bike.jpg',
+    textclr: '#f59f0033',
   },
   {
     id: '4',
@@ -111,13 +114,15 @@ export const genres = [
     description:
       'High-speed thrills, precision driving, and adrenaline-fueled competition on every track.',
     img: './src/assets/gameImg/nfs-racing.jpg',
+    textclr: '#868e9633',
   },
   {
     id: '5',
     icon: MdGames,
     title: 'Explore Beyond Genres',
     description: 'Endless genres. Infinite experiences - with one subscription',
-    img: './src/assets/gameImg/ps.jpg',
+    img: './src/assets/gameImg/psblue.png',
+    textclr: '#364fc733',
   },
 ];
 

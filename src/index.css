@@ -69,13 +69,14 @@ section {
   @apply flex gap-6 overflow-x-auto mx-16 my-8;
 }
 
-.flipcard {
+.flipfront {
+  transform: rotateX(0deg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-.flip-back {
-  transform: rotateY(180deg);
+.flipback {
+  transform: rotateX(180deg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -94,4 +95,21 @@ section {
 
 .animate-price {
   animation: priceFade 0.35s ease;
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }

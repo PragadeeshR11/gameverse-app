@@ -1,16 +1,17 @@
 export default function GameCard({ game }) {
   return (
     <div
-      className="relative group w-[480px] aspect-video border border-white/10 rounded-lg transition-all duration-300 
+      className="relative group w-[420px] aspect-video border border-white/10 rounded-lg transition-all duration-300 
       flex-shrink-0 cursor-pointer overflow-hidden hover:border-white/60  hover:shadow-[0_10px_30px_rgba(168,85,247,0.3)]"
     >
       <img
         src={game.img}
         className="w-full h-full object-cover rounded-lg transition-all duration-300 group-hover:scale-105 group-hover:brightness-75"
       />
+      {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(6,3,12,0.92),rgba(6,3,12,0.65),transparent)] rounded-lg" /> */}
       <div
         className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent 
-        opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg"
+        opacity-100 rounded-lg"
       >
         <div className="absolute bottom-3 left-3 opacity-100 group-hover:opacity-100 transition-all duration-300">
           <h3 className="text-white text-sm font-semibold">{game.title}</h3>
