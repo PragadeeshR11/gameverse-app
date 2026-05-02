@@ -8,7 +8,7 @@ export default function Subsription() {
   const [isAnnual, setAnnual] = useState(false);
 
   return (
-    <section id="subsription" className="pb-24">
+    <section id="subscriptions" className="pb-24 scroll-mt-18">
       <SubLayout>
         <h2 className="sec-head">Decided to Dive-In</h2>
         <p className="sub-text pl-1">

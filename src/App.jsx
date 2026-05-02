@@ -1,5 +1,6 @@
 import './App.css';
 import { Layout } from './UI/Layouts';
+import Navbar from './componenets/Navbar';
 import Hero from './componenets/Hero';
 import Popular from './componenets/Popular';
 import Explore from './componenets/Explore';
@@ -10,8 +11,9 @@ import Footer from './componenets/Footer';
 
 function App() {
   return (
-    <>
+    <div className="relative">
       <Layout>
+        <Navbar />
         <Hero />
         <Popular />
         <Explore />
@@ -20,7 +22,7 @@ function App() {
         <Collection />
         <Footer />
       </Layout>
-    </>
+    </div>
   );
 }
 

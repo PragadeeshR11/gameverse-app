@@ -14,9 +14,9 @@ export default function FlipCardContent({ genre }) {
         </h2>
         <p className=" text-gray-300 my-2.5 max-w-[520px]">{genre.description}</p>
         {genre.id === '5' && (
-          <button className="actionBtn bg-amber-50 text-[#212529] mt-6 ml-2 px-6 py-2 rounded-3xl ">
+          <a href="#subscriptions" className="actionBtn mt-6 ml-2 px-6 py-2 rounded-3xl ">
             Dive In &darr;
-          </button>
+          </a>
         )}
         {genre.id != '5' && (
           <Icon className=" absolute w-10 h-auto  text-gray-400 -bottom-48 -right-9 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" />

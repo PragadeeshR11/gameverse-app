@@ -1,42 +1,42 @@
-import Logo from '../assets/logo/gameverselogo.png';
+import { useRef, useState, useEffect } from 'react';
 
 export default function Hero() {
+  const heroRef = useRef(null);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const rect = heroRef.current.getBoundingClientRect();
+      const start = rect.height * 0.4;
+
+      const progress = Math.min(1, Math.max(0, (start - rect.top) / rect.height));
+      setProgress(progress);
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  const smooth = progress * progress;
+
   return (
-    <section id="hero">
-      <div className="header w-full text-[17px] py-8 grid grid-cols-[0.75fr_3fr_0.75fr] items-center">
-        <div className="logo justify-self-end">
-          <button className="transition-all duration-300 hover:scale-110 cursor-pointer">
-            <img src={Logo} alt="gameverse-logo" className="w-12 h-12" />
-          </button>
-        </div>
-        <div className="navbar font-light text-[#868e96] justify-self-center">
-          <ul className="btn flex gap-8">
-            {/* <button>Popular</button> */}
-            <button>Explore</button>
-            <button>Categories</button>
-            <button>Subsriptions</button>
-            <button>Collections</button>
-          </ul>
-        </div>
-        <div className="auth  font-light text-[#868e96] justify-self-start">
-          <ul className="flex gap-3 ">
-            <button>Login</button>
-            <button className="actionBtn bg-amber-50 text-[#212529] px-2.5 py-0.5 font-normal rounded-2xl">
-              Sign up
-            </button>
-          </ul>
-        </div>
-      </div>
+    <section ref={heroRef} id="hero" className="relative overflow-x-hidden">
       <div className="title text-center">
-        <h2 className="audiowide text-9xl mt-48 mb-8 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+        <h2
+          className="audiowide text-9xl mt-48 mb-4 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+          style={{
+            transform: `scale(${1 + smooth * 1.3})
+            translateY(${-smooth * 60}px)`,
+            opacity: 1 - smooth * 1.3,
+          }}
+        >
           Gameverse
         </h2>
-        <p className="text-xl font-thin text-gray-400 tracking-wider">
+        <p className="text-lg font-thin text-muted tracking-wider">
           Interactive interface for discovering and exploring games
         </p>
-        <button className="actionBtn mt-12 px-9 py-3 rounded-3xl  bg-amber-50 text-[#212529]">
+        <a href="#explore" className="actionBtn inline-block mt-10 px-9 py-3">
           Explore Games &rarr;
-        </button>
+        </a>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import GameCard from '../UI/GameCard';
 
 export default function Popular() {
   return (
-    <section id="popular">
+    <section id="popular" className="scroll-mt-18">
       <h2 className="sec-head">Popular</h2>
       <p className="sub-text">Trending games across all platforms</p>
 

@@ -18,11 +18,11 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer ref={footRef}>
+    <footer id="footer" ref={footRef}>
       <div className="flex justify-between items-start max-w-7xl mx-auto mb-10">
         <div>
           <a
-            href="top-0"
+            href="#root"
             className="font-semibold text-4xl bg-gradient-to-r from-[#d52d6e] to-[#8b2c9f] bg-clip-text text-transparent brightness-85
             cursor-pointer hover:brightness-110 hover:drop-shadow-2xl"
           >
@@ -44,18 +44,12 @@ export default function Footer() {
           <p className="font-light text-sm text-muted ">Frontend Developer</p>
           <p className="font-light text-sm text-muted ">React | UI/UX | Motion Design</p>
           <ul
-            className={`flex gap-4.5 mt-1 pt-1.5 border-t border-white/15 brightness-80 transition-all duration-300 delay-150 ease-out   
+            className={`flex gap-4.5 mt-1 pt-1.5 border-t border-white/15 brightness-80 transition-all duration-700 delay-400 ease-out   
             ${isBottom ? 'text-[#ff4d8d]' : 'text-muted'}`}
           >
-            <button className="socials hover:translate-y-[-1px] hover:brightness-110">
-              LinkedIn
-            </button>
-            <button className="socials hover:translate-y-[-1px] hover:brightness-110">
-              GitHub
-            </button>
-            <button className="socials hover:translate-y-[-1px] hover:brightness-110">
-              Portfolio
-            </button>
+            <a id="socials">LinkedIn</a>
+            <a id="socials">GitHub</a>
+            <a id="socials">Portfolio</a>
           </ul>
         </div>
       </div>
@@ -65,6 +59,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-//bg-gradient-to-r from-[#d52d6e] to-[#8b2c9f] bg-clip-text text-transparent
-//bg-gradient-to-r from-[#ff4d8d] via-[#d52d6e] to-[#8b2c9f] bg-clip-text text-transparent

@@ -11,19 +11,20 @@ export default function GameCard({ game }) {
       />
 
       <div
-        className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.85),rgba(0,0,0,0.5),rgba(0,0,0,0.3),rgba(0,0,0,0.25)),linear-gradient(to_bottom,rgba(0,0,0,0.2),transparent)]
+        className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent 
         opacity-100 rounded-lg transition duration-300 group-hover:bg-[linear-gradient(to_right,rgba(6,3,12,0.92),rgba(6,3,12,0.65),transparent)]"
       >
         <div className="absolute bottom-3 left-3 transition duration-300 group-hover:opacity-0 ">
           <h3 className="text-white text-sm font-semibold">{game.title}</h3>
           <p className="text-gray-300 text-xs">{game.year}</p>
         </div>
-        <button
-          className="actionBtn absolute top-32.5 left-24 bg-amber-50 text-[#212529] font-medium text-sm px-4.5 py-1.5 rounded-3xl opacity-0 
-          transition-all duration-300 scale-70 group-hover:opacity-100 group-hover:scale-105"
+        <a
+          href="#subscriptions"
+          className="actionBtn absolute top-32.5 left-24 font-medium text-sm px-4.5 py-1.5 opacity-0 
+          scale-70 group-hover:opacity-100 group-hover:scale-105"
         >
           Subscribe+
-        </button>
+        </a>
       </div>
     </div>
   );

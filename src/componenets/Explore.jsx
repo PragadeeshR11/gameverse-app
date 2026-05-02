@@ -32,7 +32,7 @@ export default function Explore() {
   }, [activeSec]);
 
   return (
-    <section id="explore" ref={explRef} className="h-[300vh] relative">
+    <section id="explore" ref={explRef} className="h-[300vh] relative scroll-mt-18">
       <ExplrLayout>
         <h2 className="sec-head mt-6">
           Xplore <br />
