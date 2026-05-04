@@ -2,6 +2,7 @@ import FlipCard from '../UI/FlipCard';
 import { useState, useEffect, useRef } from 'react';
 import { genres } from '../../gamedata.js';
 
+//new flip logic has beed added instead of hover card
 function lerp(a, b, t) {
   return a + (b - a) * t;
 }
