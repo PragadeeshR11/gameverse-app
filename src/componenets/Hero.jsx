@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 
+//gameverse title scaling logic added
 export default function Hero() {
   const heroRef = useRef(null);
   const [progress, setProgress] = useState(0);
