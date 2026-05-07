@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 
+// dynamic styling added with scroll
 export default function Footer() {
   const footRef = useRef(null);
   const [isBottom, setBottom] = useState(false);
