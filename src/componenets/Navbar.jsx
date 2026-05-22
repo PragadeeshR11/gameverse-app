@@ -1,6 +1,6 @@
 import Logo from '../assets/logo/gameverselogo.png';
 
-//sticky nav and scroll logic
+// context api for active sections
 export default function Navbar() {
   return (
     <div
