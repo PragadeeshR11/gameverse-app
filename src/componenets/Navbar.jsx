@@ -1,7 +1,10 @@
 import Logo from '../assets/logo/gameverselogo.png';
+import { use } from 'react';
+import { ActiveSecCntxt } from '../context/ActiveSection';
 
-// context api for active sections
 export default function Navbar() {
+  const { activeSec } = use(ActiveSecCntxt);
+
   return (
     <div
       className="sticky top-0 w-full text-[17px] pt-4 pb-2 grid grid-cols-[0.75fr_3fr_0.75fr] items-center z-10
@@ -17,7 +20,7 @@ export default function Navbar() {
       </div>
       <div className="font-light text-gray-400/70 justify-self-center">
         <ul className="btn flex gap-8">
-          <a id="nav" href="#popular">
+          <a id="nav" href="#popular" className={activeSec === 'popular' ? 'text-[#f8f9fa]' : ''}>
             Popular
           </a>
           <a id="nav" href="#explore">
