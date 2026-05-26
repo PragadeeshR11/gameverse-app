@@ -2,13 +2,18 @@ import { plans } from '../../gamedata.js';
 import { SubLayout } from '../UI/Layouts.jsx';
 import { PlusCard, UltimateCard } from '../UI/Layouts.jsx';
 import SubCard from '../UI/SubCard';
-import { useState } from 'react';
+import { useState, useRef, useEffect, use } from 'react';
+import { ActiveSecCntxt } from '../context/ActiveSection.jsx';
+import useActiveNav from '../hooks/useActiveNav.js';
 
 export default function Subsription() {
   const [isAnnual, setAnnual] = useState(false);
+  const secRef = useRef();
+
+  useActiveNav(secRef, 'sub', 0.4);
 
   return (
-    <section id="subscriptions" className="pb-24 scroll-mt-18">
+    <section ref={secRef} id="subscriptions" className="pb-24 scroll-mt-18">
       <SubLayout>
         <h2 className="sec-head">Decided to Dive-In</h2>
         <p className="sub-text pl-1">

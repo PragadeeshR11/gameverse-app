@@ -2,31 +2,12 @@ import { use, useEffect, useRef } from 'react';
 import { ActiveSecCntxt } from '../context/ActiveSection.jsx';
 import { games } from '../../gamedata.js';
 import GameCard from '../UI/GameCard';
+import useActiveNav from '../hooks/useActiveNav.js';
 
 export default function Popular() {
   const secRef = useRef();
-  const { setActiveSec } = use(ActiveSecCntxt);
 
-  useEffect(() => {
-    const activeNavSec = function (entries) {
-      const [entry] = entries;
-
-      if (entry.isIntersecting) setActiveSec('popular');
-      else setActiveSec('');
-    };
-
-    const navObserver = new IntersectionObserver(activeNavSec, {
-      root: null,
-      threshold: 0.4,
-      rootMargin: '-90px',
-    });
-
-    if (secRef.current) {
-      navObserver.observe(secRef.current);
-    }
-
-    return () => navObserver.disconnect();
-  }, []);
+  useActiveNav(secRef, 'popular', 0.4);
 
   return (
     <section ref={secRef} id="popular" className="scroll-mt-18">

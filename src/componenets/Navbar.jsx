@@ -20,17 +20,33 @@ export default function Navbar() {
       </div>
       <div className="font-light text-gray-400/70 justify-self-center">
         <ul className="btn flex gap-8">
-          <a id="nav" href="#popular" className={activeSec === 'popular' ? 'text-[#f8f9fa]' : ''}>
+          <a
+            id="nav"
+            href="#popular"
+            className={`transition-colors duration-500 ease-out ${activeSec === 'popular' ? 'text-[#f8f9fa]' : ''}`}
+          >
             Popular
           </a>
-          <a id="nav" href="#explore">
+          <a
+            id="nav"
+            href="#explore"
+            className={`transition-colors duration-500 ease-out ${activeSec === 'explore' ? 'text-[#f8f9fa]' : ''}`}
+          >
             Explore
           </a>
-          <a id="nav" href="#subscriptions">
+          <a
+            id="nav"
+            href="#subscriptions"
+            className={`transition-colors duration-500 ease-out ${activeSec === 'sub' ? 'text-[#f8f9fa]' : ''}`}
+          >
             Subscriptions
           </a>
-          <a id="nav" href="#footer">
-            About
+          <a
+            id="nav"
+            href="#footer"
+            className={`transition-colors duration-500 ease-out ${activeSec === 'credits' ? 'text-[#f8f9fa]' : ''}`}
+          >
+            Beyond
           </a>
         </ul>
       </div>

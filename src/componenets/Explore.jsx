@@ -1,11 +1,17 @@
 import ExploreLayout from '../UI/Explorelayout.jsx';
 import { exploreItems } from '../../gamedata.js';
 import { ExplrLayout } from '../UI/Layouts.jsx';
-import { useEffect, useState, useRef } from 'react';
+import Categories from './Categories.jsx';
+import { useEffect, useState, useRef, use } from 'react';
+import { ActiveSecCntxt } from '../context/ActiveSection.jsx';
+import useActiveNav from '../hooks/useActiveNav.js';
 
 export default function Explore() {
-  const [activeSec, setActiveSec] = useState(0);
+  const [activeExplrSec, setActiveExplrSec] = useState(0);
   const explRef = useRef(null);
+
+  //Nav Active section
+  useActiveNav(explRef, 'explore', 0.1, true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,13 +29,13 @@ export default function Explore() {
           exploreItems.length - 1,
           Math.floor(scrollProgress * exploreItems.length)
         );
-        setActiveSec(step);
+        setActiveExplrSec(step);
       }
     };
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeSec]);
+  }, [activeExplrSec]);
 
   return (
     <section id="explore" ref={explRef} className="h-[300vh] relative scroll-mt-18">
@@ -39,7 +45,7 @@ export default function Explore() {
           and Xperience
         </h2>
         <div className="sticky h-screen top-0 flex items-center justify-between px-6">
-          <ExploreLayout exploreItems={exploreItems} activeSec={activeSec} />
+          <ExploreLayout exploreItems={exploreItems} activeSec={activeExplrSec} />
         </div>
       </ExplrLayout>
     </section>

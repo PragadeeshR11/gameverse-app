@@ -1,9 +1,12 @@
 import { useRef, useState, useEffect } from 'react';
+import useActiveNav from '../hooks/useActiveNav';
 
 //gameverse title scaling logic added
 export default function Hero() {
   const heroRef = useRef(null);
   const [progress, setProgress] = useState(0);
+
+  useActiveNav(heroRef, '', 0.1);
 
   useEffect(() => {
     const handleScroll = () => {

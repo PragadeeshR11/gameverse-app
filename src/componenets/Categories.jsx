@@ -1,6 +1,7 @@
 import FlipCard from '../UI/FlipCard';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, use } from 'react';
 import { genres } from '../../gamedata.js';
+import useActiveNav from '../hooks/useActiveNav.js';
 
 //new flip logic has beed added instead of hover card
 function lerp(a, b, t) {
@@ -10,6 +11,8 @@ function lerp(a, b, t) {
 export default function Categories() {
   const catRef = useRef(null);
   const rafRef = useRef(null);
+
+  useActiveNav(catRef, 'explore', 0.1);
 
   const rawProgress = useRef(0);
   const smoothProgress = useRef(0);

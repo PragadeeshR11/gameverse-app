@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { Layout } from '../UI/Layouts';
 import { Masonary, Masonarytext } from '../UI/Masonary';
+import useActiveNav from '../hooks/useActiveNav';
 
 export default function Collection() {
   const [progress, setProgress] = useState(0);
@@ -8,6 +9,9 @@ export default function Collection() {
   const rawProgress = useRef(0);
   const smoothProgress = useRef(0);
   const rafId = useRef(null);
+
+  //ActiveNav
+  useActiveNav(colRef, 'credits', 0.3);
 
   useEffect(() => {
     const computeRaw = () => {

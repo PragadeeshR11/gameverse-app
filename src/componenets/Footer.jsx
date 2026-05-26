@@ -1,9 +1,13 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, use } from 'react';
+import { ActiveSecCntxt } from '../context/ActiveSection';
+import useActiveNav from '../hooks/useActiveNav';
 
 // dynamic styling added with scroll
 export default function Footer() {
-  const footRef = useRef(null);
+  const footRef = useRef();
   const [isBottom, setBottom] = useState(false);
+
+  useActiveNav(footRef, 'credits', 0);
 
   useEffect(() => {
     const handleScroll = () => {
