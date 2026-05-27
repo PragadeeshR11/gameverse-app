@@ -1,3 +1,5 @@
+import { split } from 'postcss/lib/list';
+
 export default function GameCard({ game }) {
   return (
     <div
@@ -6,7 +8,7 @@ export default function GameCard({ game }) {
       hover:shadow-[0_12px_35px_rgba(0,0,0,0.7)]"
     >
       <img
-        src={game.img}
+        src={game.background_image}
         className="w-full h-full object-cover rounded-lg transition-all duration-300 group-hover:scale-105 group-hover:brightness-75"
       />
 
@@ -15,8 +17,8 @@ export default function GameCard({ game }) {
         opacity-100 rounded-lg transition duration-300 group-hover:bg-[linear-gradient(to_right,rgba(6,3,12,0.92),rgba(6,3,12,0.65),transparent)]"
       >
         <div className="absolute bottom-3 left-3 transition duration-300 group-hover:opacity-0 ">
-          <h3 className="text-white text-sm font-semibold">{game.title}</h3>
-          <p className="text-gray-300 text-xs">{game.year}</p>
+          <h3 className="text-white text-sm font-semibold">{game.name}</h3>
+          <p className="text-gray-300 text-xs">{game.released?.split('-')[0]}</p>
         </div>
         <a
           href="#subscriptions"
