@@ -38,7 +38,10 @@ export default function Hero() {
         <p className="text-lg font-thin text-muted tracking-wider">
           Interactive interface for discovering and exploring games
         </p>
-        <a href="#explore" className="actionBtn inline-block mt-10 px-9 py-3">
+        <a
+          href="#explore"
+          className="actionBtn bg-amber-50 text-black inline-block mt-10 px-9 py-3 "
+        >
           Explore Games &rarr;
         </a>
       </div>

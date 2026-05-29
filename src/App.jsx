@@ -1,26 +1,19 @@
 import './App.css';
 import { Layout } from './UI/Layouts';
-import Navbar from './componenets/Navbar';
-import Hero from './componenets/Hero';
-import Popular from './componenets/Popular';
-import Explore from './componenets/Explore';
-import Categories from './componenets/Categories';
-import Subsription from './componenets/Subscription';
-import Collection from './componenets/Collection';
-import Footer from './componenets/Footer';
+import Home from './componenets/Home';
+import Join from './pages/Join.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  { path: '/', element: <Home /> },
+  { path: '/join', element: <Join /> },
+]);
 
 function App() {
   return (
     <div className="relative">
       <Layout>
-        <Navbar />
-        <Hero />
-        <Popular />
-        <Explore />
-        <Categories />
-        <Subsription />
-        <Collection />
-        <Footer />
+        <RouterProvider router={router} />;
       </Layout>
     </div>
   );

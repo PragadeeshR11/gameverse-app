@@ -14,7 +14,10 @@ export default function FlipCardContent({ genre }) {
         </h2>
         <p className=" text-gray-300 my-2.5 max-w-[520px]">{genre.description}</p>
         {genre.id === '5' && (
-          <a href="#subscriptions" className="actionBtn mt-6 ml-2 px-6 py-2 rounded-3xl ">
+          <a
+            href="#subscriptions"
+            className="actionBtn bg-amber-50 text-black mt-6 ml-2 px-6 py-2 rounded-3xl "
+          >
             Dive In &darr;
           </a>
         )}

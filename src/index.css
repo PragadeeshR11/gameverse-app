@@ -43,7 +43,8 @@ body {
 }
 
 .actionBtn {
-  @apply inline-block bg-amber-50 text-black rounded-3xl transition-all duration-300 hover:bg-gray-200 hover:text-black;
+  @apply inline-block border border-gray-700 rounded-3xl transition-all duration-300 ease-out
+   hover:bg-gray-200 hover:text-black hover:cursor-pointer;
 }
 
 .subBtn:hover {
@@ -115,4 +116,40 @@ section {
   to {
     transform: translateX(0);
   }
+}
+
+form {
+  /* padding: 1.4rem; */
+  max-width: 1200px;
+}
+
+.form-input {
+  width: 80%;
+  padding: 0.7rem 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+label {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 0.9rem;
+
+  letter-spacing: 0.5px;
+}
+
+.form-data {
+  @apply px-16 mb-6;
+}
+
+input[type='radio'] {
+  accent-color: #a61e4d;
 }

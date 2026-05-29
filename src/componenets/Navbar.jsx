@@ -52,8 +52,10 @@ export default function Navbar() {
       </div>
       <div className="auth font-light text-gray-400/70 justify-self-start">
         <ul className="flex gap-3 ">
-          <button>Login</button>
-          <button className="actionBtn px-2.5 py-0.5 font-normal">Sign up</button>
+          {/* <button>Login</button> */}
+          <button className="actionBtn text-gray-300 px-3 py-0.5 hover:font-normal hover:scale-[1.02]">
+            About Me
+          </button>
         </ul>
       </div>
     </div>
