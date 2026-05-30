@@ -120,7 +120,7 @@ section {
 
 form {
   /* padding: 1.4rem; */
-  max-width: 1200px;
+  /* max-width: 1200px; */
 }
 
 .form-input {
@@ -136,13 +136,9 @@ form {
 
 label {
   display: block;
-
   margin-bottom: 0.4rem;
-
   color: rgba(255, 255, 255, 0.8);
-
   font-size: 0.9rem;
-
   letter-spacing: 0.5px;
 }
 
@@ -152,4 +148,5 @@ label {
 
 input[type='radio'] {
   accent-color: #a61e4d;
+  cursor: pointer;
 }

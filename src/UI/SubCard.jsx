@@ -1,6 +1,8 @@
 import { TiTick } from 'react-icons/ti';
+import { useNavigate } from 'react-router-dom';
 
 export default function SubCard({ plan, activePlan }) {
+  const navigate = useNavigate();
   return (
     <>
       <h2 className="font-semibold text-4xl text-gray-200 tracking-wider">{plan.name}</h2>
@@ -14,6 +16,7 @@ export default function SubCard({ plan, activePlan }) {
       </p>
       <p className="font-thin text-xs text-muted tracking-normal">Pause or cancel anytime</p>
       <button
+        onClick={() => navigate('/join', { state: { plan: plan.name } })}
         className={`subBtn border border-gray-300/60 rounded-2xl py-1.5 px-20 mx-2 my-6 transition-transform duration-300 
             ${plan.name === 'Ultimate' ? ' bg-gray-200 text-black ' : ''}`}
       >
