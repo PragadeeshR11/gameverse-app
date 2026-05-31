@@ -7,7 +7,7 @@ export default function Subscribed() {
   const userName = loc.state?.username.toUpperCase() || '';
 
   return (
-    <div className="h-screen overflow-hidden flex  items-center justify-center ">
+    <div className="h-screen overflow-hidden flex items-center justify-center ">
       <div className="max-w-3xl">
         <SubLayout>
           <div className="p-6">

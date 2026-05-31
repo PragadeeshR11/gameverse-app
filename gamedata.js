@@ -79,7 +79,7 @@ export const exploreItems = [
     img: './src/assets/gameImg/exploreimg3.jpg',
   },
 ];
-import { LuTriangle } from 'react-icons/lu';
+// import { LuTriangle } from 'react-icons/lu';
 
 export const genres = [
   {

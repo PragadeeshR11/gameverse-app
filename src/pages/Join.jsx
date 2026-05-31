@@ -94,7 +94,7 @@ export default function Join() {
             </div>
             <div className="flex justify-end my-2 mr-8">
               <button type="submit" className=" actionBtn bg-amber-50 text-black px-9 py-3">
-                Dive-In
+                {isPending ? 'Diving-In' : 'Dive-In'}
               </button>
             </div>
           </form>
