@@ -1,6 +1,8 @@
 import { FiTriangle } from 'react-icons/fi';
 import { FaRegSquare, FaRegCircle, FaTimes } from 'react-icons/fa';
 import { MdGames } from 'react-icons/md';
+import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
+import { LuLink } from 'react-icons/lu';
 
 export const games = [
   {
@@ -179,4 +181,27 @@ export const masonary = [
   './src/assets/masonary/masonary13.jpg',
   './src/assets/masonary/masonary14.jpg',
   './src/assets/masonary/masonary15.jpg',
+];
+
+export const socials = [
+  {
+    id: '1',
+    icon: FaGithub,
+    name: 'GitHub',
+  },
+  {
+    id: '2',
+    icon: FaLinkedin,
+    name: 'LinkedIn',
+  },
+  {
+    id: '3',
+    icon: FaFileDownload,
+    name: 'Resume',
+  },
+  {
+    id: '4',
+    icon: LuLink,
+    name: 'LiveProject - Gameverse',
+  },
 ];

@@ -35,7 +35,7 @@ export default function AboutMeNav() {
               href="#subscriptions"
               className={`transition-colors duration-500 ease-out ${activeSec === 'sub' ? 'text-[#f8f9fa]' : ''}`}
             >
-              Project
+              Projects
             </a>
             <a
               id="nav"

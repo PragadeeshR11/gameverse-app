@@ -2,11 +2,15 @@
 
 :root {
   --text-muted: #9ca3af;
+  --bg-shady: linear-gradient(135deg, rgba(50, 50, 50, 0.12));
 }
 
 @layer utilities {
   .text-muted {
     color: var(--text-muted);
+  }
+  .bg-shady {
+    background-color: var(--bg-shady);
   }
 }
 
@@ -53,7 +57,7 @@ body {
 
 /* section */
 section {
-  @apply mb-36;
+  @apply pb-36;
 }
 
 .col {

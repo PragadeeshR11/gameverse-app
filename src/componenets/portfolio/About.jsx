@@ -2,11 +2,13 @@ import { LuLink } from 'react-icons/lu';
 
 export default function About() {
   return (
-    <div className="flex mx-12 pb-12">
+    <section id="about" className="max-w-7xl mx-auto flex  pb-12">
       <div className="leftPanel basis-3/4">
         <div className="max-w-3xl">
-          <span className="text-pink-500/70 text-sm font-light">A little about me</span>
-          <p className="font-light text-2xl">
+          <span className="text-pink-500/70 text-sm font-light tracking-wider">
+            A little about me
+          </span>
+          <p className="font-light text-2xl whitespace-pre-line">
             Hi, I'm Pragadeesh, a Software Engineer with 3.5 years of experience delivering
             frontend-focused enhancements, UI customization, and feature development for enterprise
             web applications.
@@ -61,6 +63,6 @@ export default function About() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
