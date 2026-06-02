@@ -1,10 +1,12 @@
 import { useRef, useEffect, useState, use } from 'react';
 import { ActiveSecCntxt } from '../context/ActiveSection';
 import useActiveNav from '../hooks/useActiveNav';
+import { useNavigate } from 'react-router-dom';
 
 // dynamic styling added with scroll
 export default function Footer() {
   const footRef = useRef();
+  const navigate = useNavigate();
   const [isBottom, setBottom] = useState(false);
 
   useActiveNav(footRef, 'credits', 0);
@@ -23,44 +25,29 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer id="footer" ref={footRef}>
-      <div className="flex justify-between items-start max-w-7xl mx-auto mb-10">
-        <div>
+    <footer id="footer" ref={footRef} className="relative py-10 overflow-hidden">
+      <div className="w-full flex justify-center items-start mb-36">
+        <ul className="flex gap-10 text-muted tracking-wider">
+          <a className="socials">GitHub</a>
+          <a className="socials">LinkedIn</a>
+          <a className="socials">Resume</a>
           <a
-            href="#root"
-            className="font-semibold text-4xl bg-gradient-to-r from-[#d52d6e] to-[#8b2c9f] bg-clip-text text-transparent brightness-85
-            cursor-pointer hover:brightness-110 hover:drop-shadow-2xl"
+            onClick={() => navigate('/aboutme')}
+            className="socials text-pink-500/70 hover:brightness-80"
           >
-            Gameverse
+            Meet the Developer &rarr;{' '}
           </a>
-          <p className="max-w-[420px] font-light text-sm text-muted py-2 leading-5">
-            A curated gaming experience built with React,
-            <br />
-            designed around immersive UI and fluid motion experiences.
-          </p>
-        </div>
-        <div className="text-right">
-          <h2
-            className="font-semibold text-3xl pb-1.5 bg-gradient-to-r from-[#ff4d8d] via-[#d52d6e] to-[#8b2c9f] 
-          bg-clip-text text-transparent brightness-85"
-          >
-            Pragadeesh R
-          </h2>
-          <p className="font-light text-sm text-muted ">Frontend Developer</p>
-          <p className="font-light text-sm text-muted ">React | UI/UX | Motion Design</p>
-          <ul
-            className={`flex gap-4.5 mt-1 pt-1.5 border-t border-white/15 brightness-80 transition-all duration-700 delay-400 ease-out   
-            ${isBottom ? 'text-[#ff4d8d]' : 'text-muted'}`}
-          >
-            <a id="socials">LinkedIn</a>
-            <a id="socials">GitHub</a>
-            <a id="socials">Portfolio</a>
-          </ul>
-        </div>
+        </ul>
       </div>
-      <p className="font-extralight text-xs text-center text-gray-500 border-b border-white/10 pb-2">
-        © 2026 Gameverse — Built by Pragadeesh
-      </p>
+      <div className="absolute -bottom-10 left-35 w-full flex justify-center">
+        <h1
+          className="text-[10rem] font-black leading-none text-transparent opacity-40 whitespace-nowrap select-none pointer-events-none"
+          style={{ WebkitTextStroke: '2px rgba(255,255,255,0.15)' }}
+        >
+          GAMEVERSE
+        </h1>
+      </div>
+      <p className="font-light text-xs text-left text-gray-500 ml-4">© 2026 Gameverse</p>
     </footer>
   );
 }

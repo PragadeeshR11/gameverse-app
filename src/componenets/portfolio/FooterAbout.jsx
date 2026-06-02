@@ -1,12 +1,13 @@
-import { LuLink } from 'react-icons/lu';
 import { socials } from '../../../gamedata.js';
 
 export default function Contact() {
   const Icon = socials.icon;
   return (
     <footer className=" max-w-7xl mx-auto">
-      <div className="inline-block border border-dashed border-zinc-600 px-6 py-3 mb-8">
-        <span className="text-sm font-medium tracking-widest uppercase">Contact</span>
+      <div className="inline-block border border-dashed border-gray-600 px-6 py-3 mb-8">
+        <span className="text-sm font-medium text-pink-500/70 tracking-widest uppercase">
+          Contact
+        </span>
       </div>
       <div className="flex py-6 mb-28">
         <div className="basis-1/3">

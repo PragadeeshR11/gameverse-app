@@ -61,7 +61,7 @@ section {
 }
 
 .col {
-  @apply mb-0;
+  @apply pb-0;
 }
 
 .sec-head {

@@ -1,8 +1,10 @@
 import Logo from '../assets/logo/gameverselogo.png';
 import { use } from 'react';
 import { ActiveSecCntxt } from '../context/ActiveSection';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const { activeSec } = use(ActiveSecCntxt);
 
   return (
@@ -50,13 +52,13 @@ export default function Navbar() {
           </a>
         </ul>
       </div>
-      <div className="auth font-light text-gray-400/70 justify-self-start">
-        <ul className="flex gap-3 ">
-          {/* <button>Login</button> */}
-          <button className="actionBtn text-gray-300 px-3 py-0.5 hover:font-normal hover:scale-[1.02]">
-            About Me
-          </button>
-        </ul>
+      <div className="font-light text-gray-400/70 justify-self-start">
+        <button
+          onClick={() => navigate('/aboutme')}
+          className="actionBtn text-gray-300 px-3 py-0.5 hover:font-normal hover:scale-[1.02]"
+        >
+          About Me
+        </button>
       </div>
     </div>
   );

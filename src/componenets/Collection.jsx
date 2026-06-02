@@ -43,7 +43,7 @@ export default function Collection() {
 
   return (
     <section id="collection" ref={colRef} className="col relative h-[200vh]">
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen flex items-center justify-center border-b border-white/10 mb-12 overflow-hidden">
         <Masonary progress={progress} />
         <Masonarytext progress={progress} />
       </div>
