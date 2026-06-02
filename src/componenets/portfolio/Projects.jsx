@@ -1,9 +1,24 @@
+import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
+import useReveal from '../../hooks/useReveal';
+import useActiveNav from '../../hooks/useActiveNav';
 import gameverseHero from '../../assets/gameImg/gameversehero.png';
 import gameversepop from '../../assets/gameImg/gameversepop.png';
 
 export default function Projects() {
+  const navigate = useNavigate();
+  const secRef = useRef();
+  const isVisible = useReveal(secRef);
+
+  useActiveNav(secRef, 'projects', 0.2);
+
   return (
-    <section className=" max-w-7xl mx-auto">
+    <section
+      id="projects"
+      ref={secRef}
+      className={`max-w-7xl mx-auto scroll-mt-18 transition-all duration-700 ease-in
+      ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+    >
       <p className="text-pink-500/70 text-center tracking-widest mb-6">What I've Built</p>
       <h2 className="text-5xl font-bold text-center mb-14">
         Featured <br /> Projects
@@ -20,7 +35,10 @@ export default function Projects() {
           <button className="actionBtn text-sm font-semibold tracking-widest px-4.5 py-3.5">
             GitHub
           </button>
-          <button className="actionBtn bg-amber-50 text-black text-sm font-semibold tracking-widest px-5 py-3.5">
+          <button
+            onClick={() => navigate('/')}
+            className="actionBtn bg-amber-50 text-black text-sm font-semibold tracking-widest px-5 py-3.5"
+          >
             VIEW GAMEVERSE
           </button>
         </div>

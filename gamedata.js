@@ -188,20 +188,24 @@ export const socials = [
     id: '1',
     icon: FaGithub,
     name: 'GitHub',
+    link: '',
   },
   {
     id: '2',
     icon: FaLinkedin,
     name: 'LinkedIn',
+    link: '',
   },
   {
     id: '3',
     icon: FaFileDownload,
     name: 'Resume',
+    link: '',
   },
   {
     id: '4',
     icon: LuLink,
     name: 'LiveProject - Gameverse',
+    link: '/',
   },
 ];

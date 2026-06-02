@@ -1,9 +1,23 @@
+import { useNavigate } from 'react-router-dom';
 import { socials } from '../../../gamedata.js';
+import { useRef } from 'react';
+import useActiveNav from '../../hooks/useActiveNav.js';
+import useReveal from '../../hooks/useReveal.js';
 
 export default function Contact() {
   const Icon = socials.icon;
+  const navigate = useNavigate();
+  const secRef = useRef();
+  useActiveNav(secRef, 'contact', 0.6);
+  const isVisible = useReveal(secRef);
+
   return (
-    <footer className=" max-w-7xl mx-auto">
+    <footer
+      id="contact"
+      ref={secRef}
+      className={`max-w-7xl mx-auto transition-all duration-700 ease-in
+      ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+    >
       <div className="inline-block border border-dashed border-gray-600 px-6 py-3 mb-8">
         <span className="text-sm font-medium text-pink-500/70 tracking-widest uppercase">
           Contact
@@ -34,7 +48,13 @@ export default function Contact() {
               const Icon = social.icon;
               return (
                 <div className="border-y border-dashed border-zinc-800 py-3">
-                  <a key={social.id} className="socials">
+                  <a
+                    key={social.id}
+                    className="socials"
+                    onClick={() => {
+                      if (social.link) navigate(social.link);
+                    }}
+                  >
                     <Icon className="inline-block  mx-1.5" /> {social.name}
                   </a>
                 </div>
@@ -48,4 +68,18 @@ export default function Contact() {
       </p>
     </footer>
   );
+}
+
+{
+  /* <a
+
+  href={social.link}
+
+  target="_blank"
+
+  rel="noopener noreferrer"
+
+  className="socials"
+
+></a> */
 }

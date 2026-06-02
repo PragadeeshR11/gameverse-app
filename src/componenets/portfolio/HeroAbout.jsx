@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { RiDownloadLine } from 'react-icons/ri';
+import useActiveNav from '../../hooks/useActiveNav';
 
 const WORDS = ['Frontend', 'React', 'UI'];
 const TYPE_SPEED = 100;
@@ -51,10 +52,13 @@ function useTypewriter(words) {
 }
 
 export default function HeroAbout() {
+  const secRef = useRef();
   const animatedWord = useTypewriter(WORDS);
 
+  useActiveNav(secRef, '', 0.4);
+
   return (
-    <div className="h-screen flex items-center justify-center flex-col pb-16">
+    <section ref={secRef} className="h-screen flex items-center justify-center flex-col pb-16">
       {/* //layout aligning */}
       <div>
         <h1 className="text-9xl font-semibold">
@@ -82,6 +86,6 @@ export default function HeroAbout() {
         }
       `}</style>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,4 +1,4 @@
-import { use, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ActiveSecCntxt } from '../context/ActiveSection.jsx';
 // import { games } from '../../gamedata.js';
 // import GameCard from '../UI/GameCard';
