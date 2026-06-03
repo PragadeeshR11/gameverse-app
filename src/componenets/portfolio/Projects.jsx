@@ -168,19 +168,6 @@ export default function Projects() {
 
         {/* Right sidebar */}
         <div className="max-w-90 shrink-0 space-y-4">
-          {/* Project Details */}
-          {/* <div className="rounded-xl border border-gray-200 p-6 bg-white">
-            <h3 className="text-sm font-bold tracking-widest mb-4">PROJECT DETAILS</h3>
-            <div className="flex justify-between items-center py-3 border-b border-dashed border-gray-200">
-              <span className="text-sm text-gray-500">Role:</span>
-              <span className="text-sm font-semibold">Data Analyst</span>
-            </div>
-            <div className="flex justify-between items-center py-3">
-              <span className="text-sm text-gray-500">Timeline:</span>
-              <span className="text-sm font-semibold">Nov 2025 – Dec 2025</span>
-            </div>
-          </div> */}
-
           {/* Architecture & Tech Stack */}
           <div className="rounded-xl border border-gray-700 bg-gray-900/40 p-6">
             <h3 className="text-sm font-bold tracking-widest mb-5">
