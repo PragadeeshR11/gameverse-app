@@ -42,7 +42,7 @@ export default function ExploreLayout({ exploreItems, activeSec }) {
             key={i}
             src={item.img}
             alt=""
-            className={`absolute inset-0 w-full h-full object-cover
+            className={`absolute inset-0 w-full h-full object-cover rounded-2xl
             transition-all duration-800 ease-[cubic-bezier(0.22,1,0.36,1)] shadow-[0_0_60px_rgba(168,85,247,0.12)] hover:scale-[1.02]
             ${activeSec === i ? 'opacity-100 scale-100 blur-0 z-10' : 'opacity-0 scale-[1.02] blur-[1px] z-0'}`}
           />
@@ -52,12 +52,6 @@ export default function ExploreLayout({ exploreItems, activeSec }) {
           className="absolute inset-0 rounded-lg bg-[linear-gradient(to_left,rgba(10,5,20,0.35),rgba(168,85,247,0.15),transparent)] 
           opacity-80  pointer-events-none"
         />
-        {/* <img
-          src={exploreItem.img}
-          className="aspect-video w-full object-cover  border border-white/5 rounded-lg shadow-[0_0_40px_rgba(168,85,247,0.15)]
-          transition-all duration-300 bg-[linear-gradient(to_left,rgba(10,5,20,0.55),rgba(10,5,20,0.25),transparent)]  hover:scale-[1.02]"
-          alt="explore-img"
-        /> */}
       </div>
     </div>
   );

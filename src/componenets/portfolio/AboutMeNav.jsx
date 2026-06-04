@@ -4,7 +4,7 @@ import { ActiveSecCntxt } from '../../context/ActiveSection';
 export default function AboutMeNav() {
   const { activeSec } = use(ActiveSecCntxt);
   return (
-    <div className="sticky">
+    <div className="sticky sticky-nav">
       <div className="flex justify-between items-center mx-4 md:mx-12">
         <a className="font-semibold" onClick={() => window.scrollTo({ top: 0 })}>
           Pragadeesh<span className="text-pink-700 text-3xl">.</span>

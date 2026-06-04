@@ -38,14 +38,29 @@ export default function Explore() {
   }, [activeExplrSec]);
 
   return (
-    <section id="explore" ref={explRef} className="h-[300vh] relative scroll-mt-18">
+    <section id="explore" ref={explRef} className="relative h-[300vh] scroll-mt-18">
       <ExplrLayout>
         <h2 className="sec-head mt-6">
           Xplore <br />
           and Xperience
         </h2>
-        <div className="sticky h-screen top-0 flex items-center justify-between px-6">
-          <ExploreLayout exploreItems={exploreItems} activeSec={activeExplrSec} />
+        <div className="sticky top-0 py-4 hidden lg:block ">
+          <div className="h-screen flex items-center justify-between px-6  ">
+            <ExploreLayout exploreItems={exploreItems} activeSec={activeExplrSec} />
+          </div>
+        </div>
+
+        {/* mobile static version */}
+        <div className="lg:hidden px-4 py-8 space-y-12">
+          {exploreItems.map((item, i) => (
+            <div key={i} className=" border border-white/10 rounded-xl overflow-hidden bg-white/2">
+              <img src={item.img} alt={item.title} className="w-full aspect-video object-cover" />
+              <div className="p-5">
+                <h3 className="text-2xl font-medium text-[#dee2e6] mb-3">{item.title}</h3>
+                <p className="text-sm leading-7 text-[#868e96]">{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </ExplrLayout>
     </section>

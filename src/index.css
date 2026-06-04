@@ -63,7 +63,7 @@ a {
 } */
 
 .actionBtn {
-  @apply inline-block border border-gray-700 rounded-3xl transition-all duration-300 ease-out
+  @apply border border-gray-700 rounded-3xl transition-all duration-300 ease-out
    hover:bg-gray-200 hover:text-black hover:cursor-pointer;
 }
 
@@ -80,8 +80,8 @@ section {
   @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-0;
 }
 
-.sticky {
-  @apply top-0 w-full text-sm md:text-[17px] py-3 md:pt-5 md:pb-2 items-center z-10 bg-[linear-gradient(to_bottom,rgba(6,3,15,0.9),rgba(6,3,15,0.65),transparent)] backdrop-blur-md;
+.sticky-nav {
+  @apply top-0 z-50 w-full text-sm md:text-[17px] pt-5 pb-2 items-center bg-[linear-gradient(to_bottom,rgba(6,3,15,0.9),rgba(6,3,15,0.65),transparent)] backdrop-blur-md;
 }
 
 .col {
@@ -89,7 +89,7 @@ section {
 }
 
 .sec-head {
-  @apply text-4xl text-left font-semibold tracking-wider uppercase text-[#dee2e6] mx-16 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
+  @apply text-3xl lg:text-4xl text-left font-semibold tracking-wider uppercase text-[#dee2e6] mx-16 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
   font-family: 'Audiowide', sans-serif;
 }
 
