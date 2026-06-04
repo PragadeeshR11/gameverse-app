@@ -2,16 +2,28 @@
 
 :root {
   --text-muted: #9ca3af;
-  --bg-shady: linear-gradient(135deg, rgba(50, 50, 50, 0.12));
 }
 
 @layer utilities {
   .text-muted {
     color: var(--text-muted);
   }
-  .bg-shady {
-    background-color: var(--bg-shady);
+  .subtleAccent {
+    @apply text-pink-500/70;
   }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.animate-blink {
+  animation: blink 0.7s step-end infinite;
 }
 
 /* Hide scrollbar */
@@ -62,6 +74,14 @@ a {
 /* section */
 section {
   @apply pb-26;
+}
+
+.portfolio {
+  @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-0;
+}
+
+.sticky {
+  @apply top-0 w-full text-sm md:text-[17px] py-3 md:pt-5 md:pb-2 items-center z-10 bg-[linear-gradient(to_bottom,rgba(6,3,15,0.9),rgba(6,3,15,0.65),transparent)] backdrop-blur-md;
 }
 
 .col {

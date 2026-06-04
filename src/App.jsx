@@ -5,7 +5,6 @@ import Join from './pages/Join.jsx';
 import Subscribed from './pages/Subscribed.jsx';
 import AboutMe from './pages/AboutMe.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import AboutMeNav from './pages/AboutMeNav.jsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },

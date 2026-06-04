@@ -5,7 +5,6 @@ import useActiveNav from '../../hooks/useActiveNav.js';
 import useReveal from '../../hooks/useReveal.js';
 
 export default function Contact() {
-  const Icon = socials.icon;
   const navigate = useNavigate();
   const secRef = useRef();
   useActiveNav(secRef, 'contact', 0.6);
@@ -15,7 +14,7 @@ export default function Contact() {
     <footer
       id="contact"
       ref={secRef}
-      className={`max-w-7xl mx-auto transition-all duration-700 ease-in
+      className={`portfolio transition-all duration-700 ease-in
       ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
     >
       <div className="inline-block border border-dashed border-gray-600 px-6 py-3 mb-8">
@@ -23,23 +22,23 @@ export default function Contact() {
           Contact
         </span>
       </div>
-      <div className="flex py-6 mb-28">
-        <div className="basis-1/3">
-          <h1 className="font-bold text-5xl leading-tight ">
+      <div className="flex flex-col lg:flex-row py-6 mb-28">
+        <div className="w-full lg:basis-1/3 mb-8 lg:mb-0">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ">
             Available For
             <br /> New <br />
             opportunities
           </h1>
         </div>
-        <div className="flex basis-2/3  justify-between">
-          <div className="flex  self-end">
+        <div className="w-full lg:basis-2/3 flex flex-col lg:flex-row justify-between">
+          <div className="flex lg:self-end mb-8 lg:mb-0">
             <p className="max-w-lg text-[17px] font-light text-gray-400">
               Actively exploring Frontend and React Developer opportunities where I can contribute
               modern UI engineering, scalable component architecture, and user-focused web
               experiences.
               <br />
               <br />
-              <span className="text-[15px]">Email: r.pragadeesh11@gmail.com</span>
+              <span className="text-sm md:text-[15px]">Email: r.pragadeesh11@gmail.com</span>
             </p>
           </div>
 

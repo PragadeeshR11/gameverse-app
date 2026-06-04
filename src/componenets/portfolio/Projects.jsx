@@ -16,28 +16,28 @@ export default function Projects() {
     <section
       id="projects"
       ref={secRef}
-      className={`max-w-7xl mx-auto scroll-mt-18 transition-all duration-700 ease-in
+      className={`portfolio scroll-mt-18 transition-all duration-700 ease-in
       ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
     >
       <p className="text-pink-500/70 text-center tracking-widest mb-6">What I've Built</p>
-      <h2 className="text-5xl font-bold text-center mb-14">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-14">
         Featured <br /> Projects
       </h2>
       {/* ── Header Row ── */}
       <div className="flex items-start justify-between mb-8">
         <div>
-          <h2 className="text-4xl font-semibold mb-2">Gameverse</h2>
-          <p className="text-gray-500 text-base">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-2">Gameverse</h2>
+          <p className="text-sm lg:text-base text-gray-500">
             A React-based gaming platform built for immersive and responsive experiences.
           </p>
         </div>
-        <div className="flex gap-3">
-          <button className="actionBtn text-sm font-semibold tracking-widest px-4.5 py-3.5">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <button className="actionBtn text-sm font-semibold tracking-widest px-2 py-2 lg:px-4.5 lg:py-3.5">
             GitHub
           </button>
           <button
             onClick={() => navigate('/')}
-            className="actionBtn bg-amber-50 text-black text-sm font-semibold tracking-widest px-5 py-3.5"
+            className="actionBtn bg-amber-50 text-black text-xs lg:text-sm font-semibold tracking-widest px-2 py-2 lg:px-4.5"
           >
             VIEW GAMEVERSE
           </button>
@@ -45,25 +45,23 @@ export default function Projects() {
       </div>
 
       {/* ── Two-column Image Grid ── */}
-      <div className="grid grid-cols-2 gap-4 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         {/* Left image card */}
         <div className="rounded-xl border border-gray-700 p-4 bg-black">
           <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-800">
-            {/* Replace with your actual image */}
             <img src={gameverseHero} alt="gameverse-hero" className="w-full h-full object-cover" />
           </div>
         </div>
         {/* Right image card */}
         <div className="rounded-xl border border-gray-700 p-4 bg-black">
           <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-800">
-            {/* Replace with your actual image */}
             <img src={gameversepop} alt="gameverse-pop" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
 
       {/* ── Stats Row (4 cards) ── */}
-      <div className="grid grid-cols-4 gap-4 mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
         {[
           { value: '15+', label: 'REUSABLE COMPONENTS' },
           {
@@ -86,7 +84,7 @@ export default function Projects() {
       </div>
 
       {/* ── Body: Left content + Right sidebar ── */}
-      <div className="flex gap-8">
+      <div className="flex flex-col lg:flex-row gap-8">
         {/* Left column */}
         <div className="flex-1 min-w-0 space-y-8">
           {/* Project Overview */}
@@ -105,6 +103,7 @@ export default function Projects() {
           {/* The Problem */}
           <div>
             <h3 className="text-sm font-bold tracking-widest mb-4">WHY GAMEVERSE ?</h3>
+            <hr className="max-w-2xl border-zinc-700/30 my-2 " />
             <p className="max-w-2xl text-gray-600 text-sm leading-relaxed">
               Many gaming platforms prioritize content volume over user experience, resulting in
               cluttered interfaces and limited visual engagement. Gameverse was created to explore
@@ -113,10 +112,10 @@ export default function Projects() {
             </p>
           </div>
 
-          {/* Key Features */}
+          {/* experience hightlights*/}
           <div>
             <h3 className="text-sm font-bold tracking-widest mb-4">Experience Highlights</h3>
-            <div className="max-w-3xl grid grid-cols-2 gap-4">
+            <div className="max-w-3xl grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 {
                   title: 'Scroll-Driven Discovery',
@@ -167,7 +166,7 @@ export default function Projects() {
         </div>
 
         {/* Right sidebar */}
-        <div className="max-w-90 shrink-0 space-y-4">
+        <div className="w-full lg:max-w-90 shrink-0 space-y-4">
           {/* Architecture & Tech Stack */}
           <div className="rounded-xl border border-gray-700 bg-gray-900/40 p-6">
             <h3 className="text-sm font-bold tracking-widest mb-5">
