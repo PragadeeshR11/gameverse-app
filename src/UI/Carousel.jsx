@@ -6,7 +6,7 @@ export default function Carousel({ marqueeDir, games }) {
       {[0].map((row) => (
         <div
           key={row}
-          className="flex gap-6"
+          className="flex gap-3 md:gap-6"
           style={{
             animation: `${marqueeDir} 60s linear infinite`,
           }}

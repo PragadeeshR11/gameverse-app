@@ -38,9 +38,13 @@ export default function Explore() {
   }, [activeExplrSec]);
 
   return (
-    <section id="explore" ref={explRef} className="relative h-[300vh] scroll-mt-18">
+    <section
+      id="explore"
+      ref={explRef}
+      className="relative h-[180vh] md:h-[190vh] lg:h-[300vh] scroll-mt-18"
+    >
       <ExplrLayout>
-        <h2 className="sec-head mt-6">
+        <h2 className="sec-head mt-6 pb-6 lg:pb-0">
           Xplore <br />
           and Xperience
         </h2>

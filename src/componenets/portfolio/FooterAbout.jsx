@@ -49,10 +49,13 @@ export default function Contact() {
                 <div className="border-y border-dashed border-zinc-800 py-3">
                   <a
                     key={social.id}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="socials"
-                    onClick={() => {
-                      if (social.link) navigate(social.link);
-                    }}
+                    // onClick={() => {
+                    //   if (social.link) navigate(social.link);
+                    // }}
                   >
                     <Icon className="inline-block  mx-1.5" /> {social.name}
                   </a>

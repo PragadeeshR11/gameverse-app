@@ -72,7 +72,12 @@ a {
 }
 
 /* section */
-section {
+#hero,
+#popular,
+#categories,
+#subscriptions,
+#about,
+#projects {
   @apply pb-26;
 }
 
@@ -84,21 +89,17 @@ section {
   @apply top-0 z-50 w-full text-sm md:text-[17px] pt-5 pb-2 items-center bg-[linear-gradient(to_bottom,rgba(6,3,15,0.9),rgba(6,3,15,0.65),transparent)] backdrop-blur-md;
 }
 
-.col {
-  @apply pb-0;
-}
-
 .sec-head {
-  @apply text-3xl lg:text-4xl text-left font-semibold tracking-wider uppercase text-[#dee2e6] mx-16 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
+  @apply text-2xl lg:text-4xl text-center lg:text-left font-semibold tracking-wider uppercase text-amber-50 lg:mx-16 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
   font-family: 'Audiowide', sans-serif;
 }
 
 .sub-text {
-  @apply text-gray-400 text-sm mx-16 mt-2;
+  @apply text-gray-400 text-sm lg:mx-16 mt-2 pb-6 lg:pb-0 text-center lg:text-left;
 }
 
 .gameCards {
-  @apply flex gap-6 overflow-x-auto mx-16 my-10;
+  @apply flex gap-6 overflow-x-auto mx-4 lg:mx-16 my-10;
 }
 
 .flipfront {
@@ -152,26 +153,16 @@ form {
 }
 
 .form-input {
-  width: 80%;
-  padding: 0.7rem 0.5rem;
-  margin-top: 0.5rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-  color: #f8f9fa;
-  transition: all 0.3s ease;
+  @apply w-full md:w-[80%] mt-2 px-2 py-[0.7rem] rounded-xl border border-white/10 bg-white/5 text-[#f8f9fa] 
+  transition-all duration-300 ease-out;
 }
 
 label {
-  display: block;
-  margin-bottom: 0.4rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  @apply block mb-[0.4rem] text-sm text-gray-200/80 tracking-wide;
 }
 
 .form-data {
-  @apply px-16 mb-6;
+  @apply lg:px-16 mb-6;
 }
 
 input[type='radio'] {

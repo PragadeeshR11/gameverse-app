@@ -31,6 +31,7 @@ export default function Collection() {
       smoothProgress.current += (rawProgress.current - smoothProgress.current) * 0.08;
 
       if (Math.abs(rawProgress.current - smoothProgress.current) > 0.0001) {
+        const visualProgress = Math.min(smoothProgress.current / 0.85, 1);
         setProgress(smoothProgress.current);
       }
 
@@ -42,8 +43,8 @@ export default function Collection() {
   }, []);
 
   return (
-    <section id="collection" ref={colRef} className="col relative h-[200vh]">
-      <div className="sticky top-0 h-screen flex items-center justify-center border-b border-white/10 mb-12 overflow-hidden">
+    <section id="collection" ref={colRef} className="col relative h-[200vh] ">
+      <div className="sticky top-0 h-screen flex items-center justify-center border-b border-white/10  overflow-hidden">
         <Masonary progress={progress} />
         <Masonarytext progress={progress} />
       </div>

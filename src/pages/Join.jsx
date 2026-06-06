@@ -6,7 +6,7 @@ export default function Join() {
   const loc = useLocation();
   const navigate = useNavigate();
 
-  const selectedPlan = loc.state?.plan || '';
+  const selectedPlan = loc.state?.plan || 'Plus';
 
   async function submitAction(prevState, formData) {
     return formData.get('username');
@@ -25,10 +25,10 @@ export default function Join() {
   }, [state]);
 
   return (
-    <div className="h-screen overflow-hidden px-6 py-12 ">
+    <div className="min-h-screen px-4 md:px-6 py-8 md:py-12">
       <a
         onClick={() => navigate(-1)}
-        className="text-muted ml-14 cursor-pointer hover:text-amber-50 transition-all duration-300 ease-out"
+        className="text-muted ml-0 md:ml-14 cursor-pointer hover:text-amber-50 transition-all duration-300 ease-out"
       >
         &larr; Back to GameVerse
       </a>
@@ -72,28 +72,31 @@ export default function Join() {
               </div>
               <div className="form-data">
                 <label htmlFor="payment">Select a Payment Method</label>
-                <div className="flex gap-8 mt-3">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 lg:gap-8 mt-3">
                   <div className="flex gap-1.5">
-                    <input type="radio" name="payment" required />
+                    <input type="radio" name="payment" value="upi" required />
                     <span className="text-gray-300">UPI</span>
                   </div>
                   <div className="flex gap-1.5">
-                    <input type="radio" name="payment" required />
+                    <input type="radio" name="payment" value="creditcard" required />
                     <span className="text-gray-300">Credit Card</span>
                   </div>
                   <div className="flex gap-1.5">
-                    <input type="radio" name="payment" required />
+                    <input type="radio" name="payment" value="debitcard" required />
                     <span className="text-gray-300">Debit Card</span>
                   </div>
                   <div className="flex gap-1.5">
-                    <input type="radio" name="payment" required />
+                    <input type="radio" name="payment" value="paypal" required />
                     <span className="text-gray-300">Paypal</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex justify-end my-2 mr-8">
-              <button type="submit" className=" actionBtn bg-amber-50 text-black px-9 py-3">
+            <div className="flex justify-center md:justify-end my-4 md:mr-8">
+              <button
+                type="submit"
+                className=" actionBtn w-full md:w-auto bg-amber-50 text-black px-9 py-3"
+              >
                 {isPending ? 'Diving-In' : 'Dive-In'}
               </button>
             </div>

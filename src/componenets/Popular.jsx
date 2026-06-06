@@ -23,7 +23,7 @@ export default function Popular() {
         setLatest(latest);
         setTopRated(toprated);
       } catch (err) {
-        setError('Unable to load Games');
+        setError('Unable to load games. Please try again later !!');
       } finally {
         setLoading(false);
       }
@@ -32,15 +32,29 @@ export default function Popular() {
   }, []);
   useActiveNav(secRef, 'popular', 0.1);
 
-  if (error) return <p> {error}</p>;
-
   return (
     <section ref={secRef} id="popular" className="scroll-mt-18">
       <h2 className="sec-head">Popular</h2>
-      <p className="sub-text">Trending games across all platforms</p>
+      <p className="sub-text text-center lg:text-justify">Trending games across all platforms</p>
+
+      {error ? (
+        <div className="flex justify-center items-center pt-20">
+          <p className="subtleAccent text-sm md:text-base tracking-widest">{error}</p>
+        </div>
+      ) : (
+        ''
+      )}
 
       {isLoading ? (
-        <p className="text-muted">Loading games...</p>
+        // <p className="text-muted text-center">Loading games...</p>
+        <div className="flex gap-6 overflow-hidden">
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={i}
+              className="w-[160px] h-[160px] lg:w-[300px] md:h-[300px] rounded-lg bg-white/5 animate-pulse mt-6"
+            />
+          ))}
+        </div>
       ) : (
         <>
           <Carousel games={latest} marqueeDir={'marqueeLeft'} />

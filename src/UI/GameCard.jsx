@@ -3,8 +3,8 @@ import { split } from 'postcss/lib/list';
 export default function GameCard({ game }) {
   return (
     <div
-      className="relative group w-[300px] h-[300px] border border-gray-400/40 rounded-lg transition-all duration-300
-      flex-shrink-0 cursor-pointer overflow-hidden hover:border-white/50 shadow-[0_6px_20px_rgba(0,0,0,0.5)] 
+      className="relative group w-[140px] h-[240px] md:w-[160px] lg:w-[300px] md:h-[300px] border border-gray-400/40 rounded-lg 
+      shrink-0 cursor-pointer overflow-hidden hover:border-white/50 shadow-[0_6px_20px_rgba(0,0,0,0.5)] 
       hover:shadow-[0_12px_35px_rgba(0,0,0,0.7)]"
     >
       <img
@@ -22,7 +22,7 @@ export default function GameCard({ game }) {
         </div>
         <a
           href="#subscriptions"
-          className="actionBtn absolute top-32.5 left-24 font-medium text-sm px-4.5 py-1.5 opacity-0 
+          className="actionBtn absolute bg-amber-50 text-black top-32.5 left-24 font-medium text-sm px-4.5 py-1.5 opacity-0 
           scale-70 group-hover:opacity-100 group-hover:scale-105"
         >
           Subscribe+

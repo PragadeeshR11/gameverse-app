@@ -181,6 +181,9 @@ export const masonary = [
   './src/assets/masonary/masonary13.jpg',
   './src/assets/masonary/masonary14.jpg',
   './src/assets/masonary/masonary15.jpg',
+  './src/assets/masonary/masonary16.jpg',
+  './src/assets/masonary/masonary17.jpg',
+  './src/assets/masonary/masonary18.jpg',
 ];
 
 export const socials = [
@@ -194,7 +197,7 @@ export const socials = [
     id: '2',
     icon: FaLinkedin,
     name: 'LinkedIn',
-    link: '',
+    link: 'https://www.linkedin.com/in/pragadeeshr/',
   },
   {
     id: '3',

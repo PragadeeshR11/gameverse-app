@@ -16,7 +16,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={secRef}
-      className={`portfolio scroll-mt-18 transition-all duration-700 ease-in
+      className={`portfolio scroll-mt-18 mb-10 transition-all duration-700 ease-in
       ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
     >
       <p className="text-pink-500/70 text-center tracking-widest mb-6">What I've Built</p>

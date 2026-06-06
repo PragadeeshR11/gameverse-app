@@ -3,7 +3,7 @@ import { masonary } from '../../gamedata';
 export function Masonary({ progress }) {
   return (
     <div
-      className="masonary relative will-change-transform scale-115"
+      className="masonary relative will-change-transform scale-175 md:scale-130 lg:scale-115"
       style={{
         transform: `scale(${1 - progress * 0.4})`,
       }}
@@ -14,7 +14,7 @@ export function Masonary({ progress }) {
           clipPath: `inset(${progress * 35}% ${progress * 10}% ${progress * 35}% ${progress * 10}% round ${progress * 400}px)`,
         }}
       >
-        <div className="columns-3 gap-1 transform -rotate-25">
+        <div className="columns-3 gap-1 transform -rotate-25 md:-rotate-15 lg:-rotate-25">
           {masonary.map((img, i) => (
             <img key={i} src={img} className="mb-4 w-full rounded-lg" />
           ))}
@@ -38,9 +38,9 @@ export function Masonarytext({ progress }) {
         }}
       >
         <p
-          className="text-white font-black uppercase text-center leading-none select-none"
+          className="text-white font-black uppercase text-center leading-none select-none text-[32px] md:text-[48px] lg:text-[64px]"
           style={{
-            fontSize: '76px',
+            // fontSize: window.innerWidth < 768 ? '32px' : '76px',
             transform: `translateY(${(1 - progress) * 100}px)`,
             transition: 'none',
           }}

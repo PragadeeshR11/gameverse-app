@@ -38,12 +38,12 @@ export default function Hero() {
         >
           Gameverse
         </h2>
-        <p className="max-w-64 lg:max-w-2xl text-xs md:text-base lg:text-lg font-light lg:font-extralight text-muted tracking-wider">
+        <p className="max-w-64 md:max-w-2xl text-xs md:text-base lg:text-lg font-light lg:font-extralight text-muted tracking-wider">
           Interactive interface for discovering and exploring games
         </p>
         <a
           href="#explore"
-          className="actionBtn bg-amber-50 text-black inline-block mt-4 lg:mt-6 px-4 md:px-7.5 py-3 "
+          className="actionBtn bg-amber-50 text-black inline-block mt-4 lg:mt-6 px-2.5 md:px-7.5 py-2 md:py-3 "
         >
           Explore Games &rarr;
         </a>

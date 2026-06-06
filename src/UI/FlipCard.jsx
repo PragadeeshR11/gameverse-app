@@ -1,10 +1,11 @@
 import FlipCardContent from './FlipCardContent';
 
 export default function FlipCard({ current, tilt, rotation, scale, front, back }) {
+  const rows = window.innerWidth < 768 ? Array.from({ length: 12 }) : Array.from({ length: 16 });
   return (
-    <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 flex flex-col justify-center gap-8 overflow-hidden pointer-events-none select-none">
-        {[0, 1, 2, 3, 4, 5, 6].map((row) => (
+    <div className="sticky top-0 min-h-screen flex items-center justify-center overflow-hidde">
+      <div className="absolute inset-0 flex flex-col justify-center gap-4 md:gap-6 lg:gap-8 overflow-hidden pointer-events-none select-none">
+        {rows.map((row) => (
           <div
             key={row}
             className="flex whitespace-nowrap"
@@ -33,7 +34,8 @@ export default function FlipCard({ current, tilt, rotation, scale, front, back }
         <div style={{ transform: `rotateX(${tilt}deg)`, transformStyle: 'preserve-3d' }}>
           {/* Inner scroll-driven X-axis flip */}
           <div
-            className="relative  w-[680px] h-[420px] rounded-2xl [transform-style:preserve-3d] will-change-transform  "
+            className="relative w-[320px] h-[220px] sm:w-[420px] sm:h-[260px] md:w-[580px] md:h-[340px] lg:w-[680px] lg:h-[420px] 
+            rounded-2xl [transform-style:preserve-3d] will-change-transform "
             style={{ transform: `rotateX(${rotation}deg) scale(${scale})` }}
           >
             <div className="absolute inset-0 [transform-style:preserve-3d] ">

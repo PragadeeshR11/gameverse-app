@@ -60,7 +60,7 @@ export default function Navbar() {
         </button>
 
         {/* Mobile*/}
-        <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden text-2xl">
+        <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden text-2xl md:mx-4">
           {menuOpen ? <HiX /> : <HiMenu />}
         </button>
       </div>

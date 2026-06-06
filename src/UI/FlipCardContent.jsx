@@ -9,14 +9,16 @@ export default function FlipCardContent({ genre }) {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(6,3,12,0.92),rgba(6,3,12,0.65),transparent)]" />
 
       <div className="absolute px-8 py-12">
-        <h2 className="font-semibold text-4xl text-amber-50 tracking-wide drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
+        <h2 className="font-semibold text-2xl md:text-3xl lg:text-4xl text-amber-50 tracking-wide drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
           {genre.title}
         </h2>
-        <p className=" text-gray-300 my-2.5 max-w-[520px]">{genre.description}</p>
+        <p className=" text-xs md:text-[13px] font-light lg:text-base lg:font-normal text-gray-300/80 my-2.5 max-w-[260px] md:max-w-[420px] lg:max-w-[520px]">
+          {genre.description}
+        </p>
         {genre.id === '5' && (
           <a
             href="#subscriptions"
-            className="actionBtn bg-amber-50 text-black mt-6 ml-2 px-6 py-2 rounded-3xl "
+            className="hidden actionBtn md:inline-block bg-amber-50 text-black mt-6 ml-2 px-6 py-2 rounded-3xl "
           >
             Dive In &darr;
           </a>

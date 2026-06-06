@@ -42,8 +42,9 @@ export default function Categories() {
       const p = smoothProgress.current;
       const totalItems = genres.length;
       const totalTransitions = totalItems - 1;
+      const animationProgress = Math.min(p / 0.85, 1);
 
-      const rawIndex = p * totalTransitions;
+      const rawIndex = animationProgress * totalTransitions;
       const clampedRawIndex = Math.min(rawIndex, totalTransitions);
       const index = Math.min(Math.floor(clampedRawIndex), totalItems - 1);
       const segmentProgress = clampedRawIndex - Math.floor(clampedRawIndex);
