@@ -5,7 +5,7 @@ import Projects from '../componenets/portfolio/Projects';
 import Contact from '../componenets/portfolio/FooterAbout';
 import { useEffect } from 'react';
 
-export default function AboutMe() {
+export default function PortFolio() {
   useEffect(() => {
     window.scrollTo({
       top: 0,

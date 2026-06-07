@@ -2,6 +2,7 @@ import { LuLink } from 'react-icons/lu';
 import { useRef } from 'react';
 import useActiveNav from '../../hooks/useActiveNav';
 import useReveal from '../../hooks/useReveal';
+import { socials } from '../../../gamedata';
 
 export default function About() {
   const secRef = useRef();
@@ -41,23 +42,28 @@ export default function About() {
       </div>
       <div className="rightPanel w-full lg:max-w-64 mx-auto lg:mx-10 mt-8 lg:mt-4 p-6 rounded-4xl bg-[linear-gradient(135deg,rgba(50,50,50,0.12),rgba(15,15,15,0.04))] ">
         <div className="flex flex-col gap-8 lg:gap-14">
-          <div className="flex flex-col gap-1">
-            <a className="socials">
-              <LuLink className="inline-block text-sm mx-1.5" />
-              <span>GitHub</span>
-            </a>
-            <a className="socials">
-              <LuLink className="inline-block text-sm mx-1.5" />
-              <span>Linked-In</span>
-            </a>
-            <a className="socials">
-              <LuLink className="inline-block text-sm mx-1.5" />
-              <span>Resume</span>
-            </a>
+          <div className="flex flex-col gap-1.5">
+            {socials.map((social) => {
+              if (social.id != 4) {
+                return (
+                  <a
+                    key={social.id}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="socials"
+                  >
+                    <LuLink className="inline-block text-sm mx-1.5" /> {social.name}
+                  </a>
+                );
+              }
+            })}
           </div>
-          <p className="text-muted font-light text-base ">
+          <p className="font-light text-base">
             Email <br />
-            <span>r.pragadeesh11@gmail.com</span>
+            <a href="mailto:r.pragadeesh11@gmail.com" className="socials">
+              r.pragadeesh11@gmail.com
+            </a>
           </p>
           <p className="text-muted font-light text-base">
             Experience

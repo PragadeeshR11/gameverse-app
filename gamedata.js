@@ -211,4 +211,10 @@ export const socials = [
     name: 'LiveProject - Gameverse',
     link: '/',
   },
+  // {
+  //   id: '5',
+  //   icon: LuLink,
+  //   name: 'Meet the Developer →',
+  //   link: '/portfolio',
+  // },
 ];

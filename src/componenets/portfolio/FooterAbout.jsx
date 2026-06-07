@@ -38,7 +38,12 @@ export default function Contact() {
               experiences.
               <br />
               <br />
-              <span className="text-sm md:text-[15px]">Email: r.pragadeesh11@gmail.com</span>
+              <span className="subtleAccent text-sm md:text-[15px]">
+                Email:{' '}
+                <a href="mailto:r.pragadeesh11@gmail.com" className="hover:brightness-80">
+                  r.pragadeesh11@gmail.com
+                </a>
+              </span>
             </p>
           </div>
 
@@ -53,9 +58,6 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="socials"
-                    // onClick={() => {
-                    //   if (social.link) navigate(social.link);
-                    // }}
                   >
                     <Icon className="inline-block  mx-1.5" /> {social.name}
                   </a>
@@ -70,18 +72,4 @@ export default function Contact() {
       </p>
     </footer>
   );
-}
-
-{
-  /* <a
-
-  href={social.link}
-
-  target="_blank"
-
-  rel="noopener noreferrer"
-
-  className="socials"
-
-></a> */
 }

@@ -3,14 +3,14 @@ import { Layout } from './UI/Layouts';
 import Home from './componenets/Home';
 import Join from './pages/Join.jsx';
 import Subscribed from './pages/Subscribed.jsx';
-import AboutMe from './pages/AboutMe.jsx';
+import PortFolio from './pages/AboutMe.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
   { path: '/join', element: <Join /> },
   { path: '/subscribed', element: <Subscribed /> },
-  { path: '/aboutme', element: <AboutMe /> },
+  { path: '/portfolio', element: <PortFolio /> },
 ]);
 
 function App() {

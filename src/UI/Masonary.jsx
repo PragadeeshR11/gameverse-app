@@ -11,7 +11,7 @@ export function Masonary({ progress }) {
       <div
         className="overflow-hidden"
         style={{
-          clipPath: `inset(${progress * 35}% ${progress * 10}% ${progress * 35}% ${progress * 10}% round ${progress * 400}px)`,
+          clipPath: `inset(${progress * 37}% ${progress * 12}% ${progress * 37}% ${progress * 12}% round ${progress * 400}px)`,
         }}
       >
         <div className="columns-3 gap-1 transform -rotate-25 md:-rotate-15 lg:-rotate-25">

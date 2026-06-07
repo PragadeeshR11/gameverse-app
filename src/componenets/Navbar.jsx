@@ -53,7 +53,7 @@ export default function Navbar() {
       </div>
       <div className="justify-self-start">
         <button
-          onClick={() => navigate('/aboutme')}
+          onClick={() => navigate('/portfolio')}
           className="hidden lg:block actionBtn font-light text-gray-300 px-3 py-0.5 hover:font-normal hover:scale-[1.02]"
         >
           About Me

@@ -1,7 +1,7 @@
 import FlipCardContent from './FlipCardContent';
 
 export default function FlipCard({ current, tilt, rotation, scale, front, back }) {
-  const rows = window.innerWidth < 768 ? Array.from({ length: 12 }) : Array.from({ length: 16 });
+  const rows = [...Array(window.innerWidth < 768 ? 12 : 16).keys()];
   return (
     <div className="sticky top-0 min-h-screen flex items-center justify-center overflow-hidde">
       <div className="absolute inset-0 flex flex-col justify-center gap-4 md:gap-6 lg:gap-8 overflow-hidden pointer-events-none select-none">
@@ -28,11 +28,8 @@ export default function FlipCard({ current, tilt, rotation, scale, front, back }
         ))}
       </div>
 
-      {/* 3D scene wrapper */}
       <div style={{ perspective: '1400px', perspectiveOrigin: '50% 50%' }}>
-        {/* Outer static tilt — gives the "lying screen" look */}
         <div style={{ transform: `rotateX(${tilt}deg)`, transformStyle: 'preserve-3d' }}>
-          {/* Inner scroll-driven X-axis flip */}
           <div
             className="relative w-[320px] h-[220px] sm:w-[420px] sm:h-[260px] md:w-[580px] md:h-[340px] lg:w-[680px] lg:h-[420px] 
             rounded-2xl [transform-style:preserve-3d] will-change-transform "
