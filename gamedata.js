@@ -9,19 +9,19 @@ export const exploreItems = [
     title: 'Discover Worlds',
     description:
       'Dive into vast, cinematic universes filled with endless exploration, stunning environments, and unforgettable adventures across genres.',
-    img: './public/gameImg/exploreimg1.png',
+    img: '/gameImg/exploreimg1.png',
   },
   {
     title: 'Immersive Gameplay',
     description:
       'Experience fluid mechanics, intense action, and responsive controls that bring every moment to life with precision and depth.',
-    img: './public/gameImg/exploreimg2.jpg',
+    img: '/gameImg/exploreimg2.jpg',
   },
   {
     title: 'Next-Gen Experience',
     description:
       'Powered by modern design and seamless performance, enjoy a refined interface that elevates how you explore and interact with games.',
-    img: './public/gameImg/exploreimg3.jpg',
+    img: '/gameImg/exploreimg3.jpg',
   },
 ];
 
@@ -31,7 +31,7 @@ export const genres = [
     icon: FaTimes,
     title: 'Action',
     description: 'Fast-paced combat, intense mechanics, and adrenaline-driven gameplay.',
-    img: './public/gameImg/readyornot-action.jpg',
+    img: '/gameImg/readyornot-action.jpg',
     textclr: '#a61e4d33',
   },
   {
@@ -39,7 +39,7 @@ export const genres = [
     icon: FaRegSquare,
     title: 'Fantasy',
     description: 'Explore vast worlds, uncover stories, and embark on immersive journeys.',
-    img: './public/gameImg/eldenring.jpg',
+    img: '/gameImg/eldenring.jpg',
     textclr: '#6741d933',
   },
 
@@ -48,7 +48,7 @@ export const genres = [
     icon: FaRegCircle,
     title: 'RPG',
     description: 'Character progression, deep narratives, and choice-driven experiences.',
-    img: './public/gameImg/gta6-bike.jpg',
+    img: '/gameImg/gta6-bike.jpg',
     textclr: '#f59f0033',
   },
   {
@@ -57,7 +57,7 @@ export const genres = [
     title: 'Racing',
     description:
       'High-speed thrills, precision driving, and adrenaline-fueled competition on every track.',
-    img: './public/gameImg/nfs-racing.jpg',
+    img: '/gameImg/nfs-racing.jpg',
     textclr: '#868e9633',
   },
   {
@@ -65,7 +65,7 @@ export const genres = [
     icon: MdGames,
     title: 'Explore Beyond Genres',
     description: 'Endless genres. Infinite experiences - with one subscription',
-    img: './public/gameImg/psblue.png',
+    img: '/gameImg/psblue.png',
     textclr: '#364fc733',
   },
 ];
@@ -108,24 +108,24 @@ export const plans = [
 ];
 
 export const masonary = [
-  './public/masonary/masonary1.jpg',
-  './public/masonary/masonary2.jpg',
-  './public/masonary/masonary3.jpg',
-  './public/masonary/masonary4.jpg',
-  './public/masonary/masonary5.jpg',
-  './public/masonary/masonary6.jpg',
-  './public/masonary/masonary7.jpg',
-  './public/masonary/masonary8.jpg',
-  './public/masonary/masonary9.jpg',
-  './public/masonary/masonary10.jpg',
-  './public/masonary/masonary11.jpg',
-  './public/masonary/masonary12.jpg',
-  './public/masonary/masonary13.jpg',
-  './public/masonary/masonary14.jpg',
-  './public/masonary/masonary15.jpg',
-  './public/masonary/masonary16.jpg',
-  './public/masonary/masonary17.jpg',
-  './public/masonary/masonary18.jpg',
+  '/masonary/masonary1.jpg',
+  '/masonary/masonary2.jpg',
+  '/masonary/masonary3.jpg',
+  '/masonary/masonary4.jpg',
+  '/masonary/masonary5.jpg',
+  '/masonary/masonary6.jpg',
+  '/masonary/masonary7.jpg',
+  '/masonary/masonary8.jpg',
+  '/masonary/masonary9.jpg',
+  '/masonary/masonary10.jpg',
+  '/masonary/masonary11.jpg',
+  '/masonary/masonary12.jpg',
+  '/masonary/masonary13.jpg',
+  '/masonary/masonary14.jpg',
+  '/masonary/masonary15.jpg',
+  '/masonary/masonary16.jpg',
+  '/masonary/masonary17.jpg',
+  '/masonary/masonary18.jpg',
 ];
 
 export const socials = [
