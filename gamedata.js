@@ -4,84 +4,26 @@ import { MdGames } from 'react-icons/md';
 import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
 import { LuLink } from 'react-icons/lu';
 
-export const games = [
-  {
-    id: '1',
-    title: 'CyberPunk2077',
-    img: './src/assets/gameImg/cyberpunk2077.jpg',
-    year: '2020',
-  },
-  {
-    id: '2',
-    title: 'WWE 2K26',
-    img: './src/assets/gameImg/2k26.jpg',
-    year: '2026',
-  },
-  {
-    id: '3',
-    title: "Assassin's Creed : Shadows",
-    img: './src/assets/gameImg/acshadows.jpg',
-    year: '2025',
-  },
-  {
-    id: '4',
-    title: 'CallofDuty : BO7',
-    img: './src/assets/gameImg/cod.jpg',
-    year: '2026',
-  },
-  {
-    id: '5',
-    title: 'EldenRing',
-    img: './src/assets/gameImg/eldenring.jpg',
-    year: '2022',
-  },
-  {
-    id: '6',
-    title: 'ResidentEvil : Requiem',
-    img: './src/assets/gameImg/residentevilrequiem.jpg',
-    year: '2026',
-  },
-  {
-    id: '7',
-    title: 'GTA 6',
-    img: './src/assets/gameImg/gta6.jpg',
-    year: 'Comming Soon',
-  },
-  {
-    id: '8',
-    title: 'HitMan',
-    img: './src/assets/gameImg/hitman.jpg',
-    year: '2023',
-  },
-  {
-    id: '9',
-    title: 'NFS : Unbound',
-    img: './src/assets/gameImg/nfs.jpg',
-    year: '2022',
-  },
-];
-
 export const exploreItems = [
   {
     title: 'Discover Worlds',
     description:
       'Dive into vast, cinematic universes filled with endless exploration, stunning environments, and unforgettable adventures across genres.',
-    img: './src/assets/gameImg/exploreimg1.png',
+    img: './public/gameImg/exploreimg1.png',
   },
   {
     title: 'Immersive Gameplay',
     description:
       'Experience fluid mechanics, intense action, and responsive controls that bring every moment to life with precision and depth.',
-    img: './src/assets/gameImg/exploreimg2.jpg',
+    img: './public/gameImg/exploreimg2.jpg',
   },
   {
     title: 'Next-Gen Experience',
     description:
       'Powered by modern design and seamless performance, enjoy a refined interface that elevates how you explore and interact with games.',
-    img: './src/assets/gameImg/exploreimg3.jpg',
+    img: './public/gameImg/exploreimg3.jpg',
   },
 ];
-// import { LuTriangle } from 'react-icons/lu';
 
 export const genres = [
   {
@@ -89,7 +31,7 @@ export const genres = [
     icon: FaTimes,
     title: 'Action',
     description: 'Fast-paced combat, intense mechanics, and adrenaline-driven gameplay.',
-    img: './src/assets/gameImg/readyornot-action.jpg',
+    img: './public/gameImg/readyornot-action.jpg',
     textclr: '#a61e4d33',
   },
   {
@@ -97,7 +39,7 @@ export const genres = [
     icon: FaRegSquare,
     title: 'Fantasy',
     description: 'Explore vast worlds, uncover stories, and embark on immersive journeys.',
-    img: './src/assets/gameImg/eldenring.jpg',
+    img: './public/gameImg/eldenring.jpg',
     textclr: '#6741d933',
   },
 
@@ -106,7 +48,7 @@ export const genres = [
     icon: FaRegCircle,
     title: 'RPG',
     description: 'Character progression, deep narratives, and choice-driven experiences.',
-    img: './src/assets/gameImg/gta6-bike.jpg',
+    img: './public/gameImg/gta6-bike.jpg',
     textclr: '#f59f0033',
   },
   {
@@ -115,7 +57,7 @@ export const genres = [
     title: 'Racing',
     description:
       'High-speed thrills, precision driving, and adrenaline-fueled competition on every track.',
-    img: './src/assets/gameImg/nfs-racing.jpg',
+    img: './public/gameImg/nfs-racing.jpg',
     textclr: '#868e9633',
   },
   {
@@ -123,7 +65,7 @@ export const genres = [
     icon: MdGames,
     title: 'Explore Beyond Genres',
     description: 'Endless genres. Infinite experiences - with one subscription',
-    img: './src/assets/gameImg/psblue.png',
+    img: './public/gameImg/psblue.png',
     textclr: '#364fc733',
   },
 ];
@@ -166,24 +108,24 @@ export const plans = [
 ];
 
 export const masonary = [
-  './src/assets/masonary/masonary1.jpg',
-  './src/assets/masonary/masonary2.jpg',
-  './src/assets/masonary/masonary3.jpg',
-  './src/assets/masonary/masonary4.jpg',
-  './src/assets/masonary/masonary5.jpg',
-  './src/assets/masonary/masonary6.jpg',
-  './src/assets/masonary/masonary7.jpg',
-  './src/assets/masonary/masonary8.jpg',
-  './src/assets/masonary/masonary9.jpg',
-  './src/assets/masonary/masonary10.jpg',
-  './src/assets/masonary/masonary11.jpg',
-  './src/assets/masonary/masonary12.jpg',
-  './src/assets/masonary/masonary13.jpg',
-  './src/assets/masonary/masonary14.jpg',
-  './src/assets/masonary/masonary15.jpg',
-  './src/assets/masonary/masonary16.jpg',
-  './src/assets/masonary/masonary17.jpg',
-  './src/assets/masonary/masonary18.jpg',
+  './public/masonary/masonary1.jpg',
+  './public/masonary/masonary2.jpg',
+  './public/masonary/masonary3.jpg',
+  './public/masonary/masonary4.jpg',
+  './public/masonary/masonary5.jpg',
+  './public/masonary/masonary6.jpg',
+  './public/masonary/masonary7.jpg',
+  './public/masonary/masonary8.jpg',
+  './public/masonary/masonary9.jpg',
+  './public/masonary/masonary10.jpg',
+  './public/masonary/masonary11.jpg',
+  './public/masonary/masonary12.jpg',
+  './public/masonary/masonary13.jpg',
+  './public/masonary/masonary14.jpg',
+  './public/masonary/masonary15.jpg',
+  './public/masonary/masonary16.jpg',
+  './public/masonary/masonary17.jpg',
+  './public/masonary/masonary18.jpg',
 ];
 
 export const socials = [
@@ -191,7 +133,7 @@ export const socials = [
     id: '1',
     icon: FaGithub,
     name: 'GitHub',
-    link: '',
+    link: 'https://github.com/PragadeeshR11/gameverse-app',
   },
   {
     id: '2',
@@ -211,10 +153,4 @@ export const socials = [
     name: 'LiveProject - Gameverse',
     link: '/',
   },
-  // {
-  //   id: '5',
-  //   icon: LuLink,
-  //   name: 'Meet the Developer →',
-  //   link: '/portfolio',
-  // },
 ];

@@ -32,9 +32,14 @@ export default function Projects() {
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
-          <button className="actionBtn text-sm font-semibold tracking-widest px-2 py-2 lg:px-4.5 lg:py-3.5">
+          <a
+            href="https://github.com/PragadeeshR11/gameverse-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="actionBtn text-sm font-semibold tracking-widest px-2 py-2 lg:px-4.5 lg:py-3.5"
+          >
             GitHub
-          </button>
+          </a>
           <button
             onClick={() => navigate('/')}
             className="actionBtn bg-amber-50 text-black text-xs lg:text-sm font-semibold tracking-widest px-2 py-2 lg:px-4.5"
