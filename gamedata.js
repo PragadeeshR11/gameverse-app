@@ -145,7 +145,7 @@ export const socials = [
     id: '3',
     icon: FaFileDownload,
     name: 'Resume',
-    link: '',
+    link: '/resume/Pragadeesh_R_React_Developer_Resume.pdf',
   },
   {
     id: '4',

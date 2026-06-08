@@ -27,9 +27,14 @@ export default function HeroAbout() {
           3.5 Years Experience • Frontend Development • React • JavaScript
         </p>
         <div className="max-w-8xl mx-auto flex justify-end my-10">
-          <button className="actionBtn w-full sm:w-auto flex items-center justify-center text-gray-300 px-6.5 py-2.5 hover:font-normal hover:scale-[1.02]">
+          <a
+            href="/resume/Pragadeesh_R_React_Developer_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="actionBtn w-full sm:w-auto flex items-center justify-center text-gray-300 px-6.5 py-2.5 hover:font-normal hover:scale-[1.02]"
+          >
             <span>Resume</span> <RiDownloadLine className="inline-block text-lg ml-1.5" />
-          </button>
+          </a>
         </div>
       </div>
     </section>
