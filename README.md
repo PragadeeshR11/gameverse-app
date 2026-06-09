@@ -10,10 +10,10 @@ The application consists of two integrated experiences:
 
 ## 🚀 Live Demo
 
-Gameverse Homepage
-##########
-Portfolio
-##########
+Gameverse Homepage: https://gameverse-pragadeesh.netlify.app/
+
+Portfolio: https://gameverse-pragadeesh.netlify.app/portfolio
+
 ⸻
 
 # 📸 Screenshots
