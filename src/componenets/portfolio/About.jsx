@@ -13,13 +13,13 @@ export default function About() {
     <section
       id="about"
       ref={secRef}
-      className={`portfolio flex flex-col lg:flex-row mb-0 lg:mb-12 scroll-mt-28 transition-all duration-700 ease-in
+      className={`portfolio flex flex-col lg:flex-row gap-6 lg:gap-0 mb-0 lg:mb-12 scroll-mt-24 sm:scroll-mt-28 transition-all duration-700 ease-in
       ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
     >
       <div className="leftPanel w-full lg:basis-3/4 ">
         <div className="max-w-3xl">
           <span className="subtleAccent text-sm font-light tracking-wider">A little about me</span>
-          <p className="text-lg md:text-xl lg:text-2xl font-light whitespace-pre-line">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light whitespace-pre-line break-words">
             Hi, I'm Pragadeesh, a Software Engineer with 3.5 years of experience delivering
             frontend-focused enhancements, UI customization, and feature development for enterprise
             web applications.
@@ -34,7 +34,7 @@ export default function About() {
             seeking Frontend Developer and React Developer opportunities.
           </p>
           <br />
-          <p className="subtleAccent tracking-wide">
+          <p className="subtleAccent tracking-wide text-sm sm:text-base break-words">
             React • JavaScript • Tailwind CSS • Context API • Redux • React Router • REST APIs • UI
             Development • Git • Responsive Design • Debugging • Frontend Engineering
           </p>

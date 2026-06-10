@@ -25,11 +25,11 @@ export default function Hero() {
     <section
       ref={heroRef}
       id="hero"
-      className="relative min-h-screen w-full overflow-x-hidden flex justify-center items-center -mt-18 lg:mt-0 "
+      className="relative min-h-screen w-full overflow-x-hidden flex justify-center items-center px-4 sm:px-6 -mt-14 sm:-mt-16 lg:mt-0"
     >
-      <div className="flex flex-col items-center justify-center gap-3 text-center">
+      <div className="flex flex-col items-center justify-center gap-3 text-center w-full max-w-5xl">
         <h2
-          className="audiowide text-5xl sm:text-6xl md:text-7xl lg:text-9xl   drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+          className="audiowide text-[clamp(2.5rem,12vw,9rem)] leading-tight drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]"
           style={{
             transform: `scale(${1 + smooth * 1.3})
             translateY(${-smooth * 60}px)`,
@@ -38,7 +38,7 @@ export default function Hero() {
         >
           Gameverse
         </h2>
-        <p className="max-w-64 md:max-w-2xl text-xs md:text-base lg:text-lg font-light lg:font-extralight text-muted tracking-wider">
+        <p className="w-full max-w-xs sm:max-w-md md:max-w-2xl text-xs sm:text-sm md:text-base lg:text-lg font-light lg:font-extralight text-muted tracking-wider">
           Interactive interface for discovering and exploring games
         </p>
         <a

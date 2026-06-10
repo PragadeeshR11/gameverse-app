@@ -47,11 +47,11 @@ export default function Popular() {
 
       {isLoading ? (
         // <p className="text-muted text-center">Loading games...</p>
-        <div className="flex gap-6 overflow-hidden">
+        <div className="gameCards">
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className="w-[160px] h-[160px] lg:w-[300px] md:h-[300px] rounded-lg bg-white/5 animate-pulse mt-6"
+              className="w-[140px] sm:w-[160px] lg:w-[300px] aspect-square shrink-0 rounded-lg bg-white/5 animate-pulse"
             />
           ))}
         </div>

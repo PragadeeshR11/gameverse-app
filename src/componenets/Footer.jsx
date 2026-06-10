@@ -1,10 +1,8 @@
-import { useRef, useEffect, useState, use } from 'react';
-import { ActiveSecCntxt } from '../context/ActiveSection';
+import { useRef, useEffect, useState } from 'react';
 import useActiveNav from '../hooks/useActiveNav';
 import { useNavigate } from 'react-router-dom';
 import { socials } from '../../gamedata';
 
-// dynamic styling added with scroll
 export default function Footer() {
   const footRef = useRef();
   const navigate = useNavigate();
@@ -26,42 +24,47 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer id="footer" ref={footRef} className="relative py-10 overflow-hidden">
-      <div className="w-full flex justify-center items-start mb-20 md:mb-36">
-        <ul className="flex flex-col lg:flex-row items-center gap-4 lg:gap-10 text-muted tracking-wider">
+    <footer id="footer" ref={footRef} className="relative py-10 px-4 sm:px-6 overflow-hidden">
+      <div className="w-full flex justify-center items-start mb-16 sm:mb-20 md:mb-36">
+        <ul className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-10 text-muted tracking-wider text-center sm:text-left">
           {socials.map((social) => {
             if (social.id != 4) {
               return (
-                <a
-                  key={social.id}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="socials"
-                >
-                  {social.name}
-                </a>
+                <li key={social.id}>
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="socials"
+                  >
+                    {social.name}
+                  </a>
+                </li>
               );
             }
           })}
-          <a
-            onClick={() => navigate('/portfolio')}
-            className="socials text-pink-500/70 hover:brightness-80 whitespace-nowrap"
-          >
-            Meet the Developer &rarr;{' '}
-          </a>
+          <li>
+            <button
+              type="button"
+              onClick={() => navigate('/portfolio')}
+              className="socials text-pink-500/70 hover:brightness-80"
+            >
+              Meet the Developer &rarr;
+            </button>
+          </li>
         </ul>
       </div>
 
-      <div className="absolute -bottom-4 lg:-bottom-10 lg:left-35 w-full flex justify-center">
+      <div className="absolute -bottom-2 sm:-bottom-4 lg:-bottom-10 inset-x-0 flex justify-center lg:justify-end lg:px-16 overflow-hidden pointer-events-none">
         <h1
-          className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] font-black leading-none text-transparent opacity-40 whitespace-nowrap select-none pointer-events-none"
+          className="font-black leading-none text-transparent opacity-40 select-none text-[clamp(3rem,18vw,10rem)]"
           style={{ WebkitTextStroke: '2px rgba(255,255,255,0.15)' }}
+          aria-hidden="true"
         >
           GAMEVERSE
         </h1>
       </div>
-      <p className="font-light text-xs text-center lg:text-left text-gray-500 lg:ml-4">
+      <p className="relative z-10 font-light text-xs text-center lg:text-left text-gray-500 lg:ml-4">
         © 2026 Gameverse
       </p>
     </footer>

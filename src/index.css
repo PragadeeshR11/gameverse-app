@@ -70,8 +70,9 @@
 }
 
 html,
-body {
-  @apply text-amber-50 box-border m-0 p-0;
+body,
+#root {
+  @apply text-amber-50 box-border m-0 p-0 w-full;
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
@@ -112,24 +113,24 @@ a {
 }
 
 .portfolio {
-  @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-0;
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16;
 }
 
 .sticky-nav {
-  @apply top-0 z-50 w-full text-sm md:text-[17px] pt-5 pb-2 items-center bg-[linear-gradient(to_bottom,rgba(6,3,15,0.9),rgba(6,3,15,0.65),transparent)] backdrop-blur-md;
+  @apply top-0 z-50 w-full text-sm md:text-[17px] pt-4 sm:pt-5 pb-2 items-center bg-[linear-gradient(to_bottom,rgba(6,3,15,0.9),rgba(6,3,15,0.65),transparent)] backdrop-blur-md;
 }
 
 .sec-head {
-  @apply text-2xl lg:text-4xl text-center lg:text-left font-semibold tracking-wider uppercase text-amber-50 lg:mx-16 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
+  @apply text-xl sm:text-2xl lg:text-4xl text-center lg:text-left font-semibold tracking-wider uppercase text-amber-50 px-4 sm:px-6 lg:px-16 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
   font-family: 'Audiowide', sans-serif;
 }
 
 .sub-text {
-  @apply text-gray-400 text-sm lg:mx-16 mt-2 pb-6 lg:pb-0 text-center lg:text-left;
+  @apply text-gray-400 text-sm px-4 sm:px-6 lg:px-16 mt-2 pb-6 lg:pb-0 text-center lg:text-left;
 }
 
 .gameCards {
-  @apply flex gap-6 overflow-x-auto mx-4 lg:mx-16 my-10;
+  @apply flex gap-4 sm:gap-6 overflow-x-hidden my-8 sm:my-10;
 }
 
 .flipfront {
@@ -147,7 +148,7 @@ a {
 /* form */
 
 .form-input {
-  @apply w-full md:w-[80%] mt-2 px-2 py-[0.7rem] rounded-xl border border-white/10 bg-white/5 text-[#f8f9fa] 
+  @apply w-full mt-2 px-3 sm:px-4 py-[0.7rem] rounded-xl border border-white/10 bg-white/5 text-[#f8f9fa] 
   transition-all duration-300 ease-out;
 }
 
@@ -156,7 +157,7 @@ label {
 }
 
 .form-data {
-  @apply lg:px-16 mb-6;
+  @apply px-4 sm:px-8 lg:px-16 mb-6;
 }
 
 input[type='radio'] {

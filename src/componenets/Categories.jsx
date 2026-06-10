@@ -90,7 +90,7 @@ export default function Categories() {
   const current = isLast ? front : showingBack ? back : front;
 
   return (
-    <section id="categories" ref={catRef} className="relative h-[400vh] ">
+    <section id="categories" ref={catRef} className="relative h-[400vh]">
       <FlipCard
         current={current}
         tilt={tilt}

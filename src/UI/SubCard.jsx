@@ -21,7 +21,7 @@ export default function SubCard({ plan, isAnnual }) {
       <p className="font-thin text-xs text-muted tracking-normal">Pause or cancel anytime</p>
       <button
         onClick={() => navigate('/join', { state: { plan: plan.name } })}
-        className={`subBtn border border-gray-300/60 rounded-2xl py-1.5 px-10 md:px-16 lg:px-20 mx-2 my-6 transition-transform duration-300 
+        className={`subBtn w-full sm:w-auto border border-gray-300/60 rounded-2xl py-1.5 px-8 sm:px-10 md:px-16 lg:px-20 mx-0 sm:mx-2 my-6 transition-transform duration-300 
             ${plan.name === 'Ultimate' ? ' bg-gray-200 text-black ' : ''}`}
       >
         Get Now

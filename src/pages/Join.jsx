@@ -25,7 +25,7 @@ export default function Join() {
   }, [state]);
 
   return (
-    <div className="min-h-screen px-4 md:px-6 py-8 md:py-12">
+    <div className="min-h-screen w-full overflow-x-hidden px-4 sm:px-6 md:px-8 py-8 md:py-12">
       <a
         onClick={() => navigate(-1)}
         className="text-muted ml-0 md:ml-14 cursor-pointer hover:text-amber-50 transition-all duration-300 ease-out"

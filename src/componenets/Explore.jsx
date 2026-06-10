@@ -49,19 +49,19 @@ export default function Explore() {
           and Xperience
         </h2>
         <div className="sticky top-0 py-4 hidden lg:block ">
-          <div className="h-screen flex items-center justify-between px-6  ">
+          <div className="h-screen flex items-center justify-between px-4 lg:px-6 xl:px-10">
             <ExploreLayout exploreItems={exploreItems} activeSec={activeExplrSec} />
           </div>
         </div>
 
         {/* mobile static version */}
-        <div className="lg:hidden px-4 py-8 space-y-12">
+        <div className="lg:hidden px-3 sm:px-4 py-6 sm:py-8 space-y-8 sm:space-y-12">
           {exploreItems.map((item, i) => (
             <div key={i} className=" border border-white/10 rounded-xl overflow-hidden bg-white/2">
               <img src={item.img} alt={item.title} className="w-full aspect-video object-cover" />
               <div className="p-5">
-                <h3 className="text-2xl font-medium text-[#dee2e6] mb-3">{item.title}</h3>
-                <p className="text-sm leading-7 text-[#868e96]">{item.description}</p>
+                <h3 className="text-xl sm:text-2xl font-medium text-[#dee2e6] mb-2 sm:mb-3">{item.title}</h3>
+                <p className="text-sm leading-6 sm:leading-7 text-[#868e96]">{item.description}</p>
               </div>
             </div>
           ))}

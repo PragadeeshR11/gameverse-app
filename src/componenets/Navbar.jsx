@@ -4,97 +4,101 @@ import { use, useState } from 'react';
 import { ActiveSecCntxt } from '../context/ActiveSection';
 import { useNavigate } from 'react-router-dom';
 
+const navLinks = [
+  { href: '#popular', label: 'Popular', section: 'popular' },
+  { href: '#explore', label: 'Explore', section: 'explore' },
+  { href: '#subscriptions', label: 'Subscriptions', section: 'sub' },
+  { href: '#footer', label: 'Beyond', section: 'credits' },
+];
+
 export default function Navbar() {
   const navigate = useNavigate();
   const { activeSec } = use(ActiveSecCntxt);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="sticky sticky-nav flex justify-between lg:grid lg:grid-cols-[0.75fr_3fr_0.75fr] px-8 md:px-0">
-      <div className="justify-self-end">
-        <button
-          className="transition-all duration-300 hover:scale-110 cursor-pointer"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >
-          <img src={Logo} alt="gameverse-logo" className="w-8 h-8 md:w-12 md:h-12" />
-        </button>
-      </div>
-      <div className="font-light text-gray-400/70 justify-self-center">
-        <ul className="hidden lg:flex gap-3 md:gap-8">
-          <a
-            id="nav"
-            href="#popular"
-            className={`transition-colors duration-500 ease-out ${activeSec === 'popular' ? 'text-[#f8f9fa]' : ''}`}
+    <header className="sticky sticky-nav">
+      <div className="flex items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-[0.75fr_3fr_0.75fr]">
+        <div className="lg:justify-self-end shrink-0">
+          <button
+            className="transition-all duration-300 hover:scale-110 cursor-pointer"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            aria-label="Scroll to top"
           >
-            Popular
-          </a>
-          <a
-            id="nav"
-            href="#explore"
-            className={`transition-colors duration-500 ease-out ${activeSec === 'explore' ? 'text-[#f8f9fa]' : ''}`}
-          >
-            Explore
-          </a>
-          <a
-            id="nav"
-            href="#subscriptions"
-            className={`transition-colors duration-500 ease-out ${activeSec === 'sub' ? 'text-[#f8f9fa]' : ''}`}
-          >
-            Subscriptions
-          </a>
-          <a
-            id="nav"
-            href="#footer"
-            className={`transition-colors duration-500 ease-out ${activeSec === 'credits' ? 'text-[#f8f9fa]' : ''}`}
-          >
-            Beyond
-          </a>
-        </ul>
-      </div>
-      <div className="justify-self-start">
-        <button
-          onClick={() => navigate('/portfolio')}
-          className="hidden lg:block actionBtn font-light text-gray-300 px-3 py-0.5 hover:font-normal hover:scale-[1.02]"
-        >
-          About Me
-        </button>
+            <img src={Logo} alt="gameverse-logo" className="w-8 h-8 md:w-12 md:h-12" />
+          </button>
+        </div>
 
-        {/* Mobile*/}
-        <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden text-2xl md:mx-4">
-          {menuOpen ? <HiX /> : <HiMenu />}
-        </button>
-      </div>
+        <nav
+          className="hidden lg:block font-light text-gray-400/70 justify-self-center"
+          aria-label="Main"
+        >
+          <ul className="flex flex-wrap justify-center gap-3 md:gap-8">
+            {navLinks.map(({ href, label, section }) => (
+              <li key={href}>
+                <a
+                  id="nav"
+                  href={href}
+                  className={`transition-colors duration-500 ease-out ${activeSec === section ? 'text-[#f8f9fa]' : ''}`}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      {/* Mobile Menu */}
+        <div className="flex items-center gap-2 lg:justify-self-start shrink-0">
+          <button
+            onClick={() => navigate('/portfolio')}
+            className="hidden lg:block actionBtn font-light text-gray-300 px-3 py-0.5 hover:font-normal hover:scale-[1.02]"
+          >
+            About Me
+          </button>
+
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="lg:hidden text-2xl p-1"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? <HiX /> : <HiMenu />}
+          </button>
+        </div>
+      </div>
 
       {menuOpen && (
-        <div className="lg:hidden col-span-full mt-4 px-4">
-          <div className="flex flex-col gap-4 text-gray-300">
-            <a href="#popular" onClick={() => setMenuOpen(false)}>
-              Popular
-            </a>
-            <a href="#explore" onClick={() => setMenuOpen(false)}>
-              Explore
-            </a>
-            <a href="#subscriptions" onClick={() => setMenuOpen(false)}>
-              Subscriptions
-            </a>
-            <a href="#footer" onClick={() => setMenuOpen(false)}>
-              Beyond
-            </a>
-
-            <button
-              onClick={() => {
-                navigate('/aboutme');
-                setMenuOpen(false);
-              }}
-              className="w-fit text-sm bg-amber-50 text-black rounded-2xl px-1.5 py-0.5 "
-            >
-              About Me
-            </button>
-          </div>
-        </div>
+        <nav
+          className="lg:hidden border-t border-white/10 mt-3 px-4 sm:px-6 pb-4"
+          aria-label="Mobile"
+        >
+          <ul className="flex flex-col gap-4 text-gray-300 mt-2">
+            {navLinks.map(({ href, label, section }) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`block py-1 transition-colors duration-300 ${activeSec === section ? 'text-[#f8f9fa]' : ''}`}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <button
+                onClick={() => {
+                  navigate('/portfolio');
+                  setMenuOpen(false);
+                }}
+                className="actionBtn w-full sm:w-fit text-sm bg-amber-50 text-black px-4 py-2"
+              >
+                About Me
+              </button>
+            </li>
+          </ul>
+          <hr className="max-w-2xl border-zinc-700/30 my-2 " />
+        </nav>
       )}
-    </div>
+    </header>
   );
 }

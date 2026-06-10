@@ -19,30 +19,30 @@ export default function Projects() {
       className={`portfolio scroll-mt-18 mb-10 transition-all duration-700 ease-in
       ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
     >
-      <p className="text-pink-500/70 text-center tracking-widest mb-6">What I've Built</p>
+      <p className="text-pink-500/70 text-center tracking-wide mb-6">What I've Built</p>
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-14">
         Featured <br /> Projects
       </h2>
       {/* ── Header Row ── */}
-      <div className="flex items-start justify-between mb-8">
-        <div>
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-8">
+        <div className="min-w-0">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-2">Gameverse</h2>
           <p className="text-sm lg:text-base text-gray-500">
             A React-based gaming platform built for immersive and responsive experiences.
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto shrink-0">
           <a
             href="https://github.com/PragadeeshR11/gameverse-app"
             target="_blank"
             rel="noopener noreferrer"
-            className="actionBtn text-sm font-semibold tracking-widest px-2 py-2 lg:px-4.5 lg:py-3.5"
+            className="actionBtn w-full sm:w-auto text-center text-sm font-semibold tracking-widest px-4 py-2 lg:px-4.5 lg:py-3.5"
           >
             GitHub
           </a>
           <button
             onClick={() => navigate('/')}
-            className="actionBtn bg-amber-50 text-black text-xs lg:text-sm font-semibold tracking-widest px-2 py-2 lg:px-4.5"
+            className="actionBtn w-full sm:w-auto bg-amber-50 text-black text-xs lg:text-sm font-semibold tracking-widest px-4 py-2 lg:px-4.5"
           >
             VIEW GAMEVERSE
           </button>
@@ -171,7 +171,7 @@ export default function Projects() {
         </div>
 
         {/* Right sidebar */}
-        <div className="w-full lg:max-w-90 shrink-0 space-y-4">
+        <div className="w-full lg:max-w-[22rem] shrink-0 space-y-4">
           {/* Architecture & Tech Stack */}
           <div className="rounded-xl border border-gray-700 bg-gray-900/40 p-6">
             <h3 className="text-sm font-bold tracking-widest mb-5">
