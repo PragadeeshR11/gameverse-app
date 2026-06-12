@@ -28,29 +28,23 @@ export default function Footer() {
       <div className="w-full flex justify-center items-start mb-16 sm:mb-20 md:mb-36">
         <ul className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-10 text-muted tracking-wider text-center sm:text-left">
           {socials.map((social) => {
-            if (social.id != 4) {
-              return (
-                <li key={social.id}>
-                  <a
-                    href={social.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="socials"
-                  >
-                    {social.name}
-                  </a>
-                </li>
-              );
-            }
+            return (
+              <li key={social.id}>
+                <a href={social.link} target="_blank" rel="noopener noreferrer" className="socials">
+                  {social.name}
+                </a>
+              </li>
+            );
           })}
           <li>
-            <button
-              type="button"
-              onClick={() => navigate('/portfolio')}
+            <a
+              href="https://portfolio-pragadeesh.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="socials text-pink-500/70 hover:brightness-80"
             >
               Meet the Developer &rarr;
-            </button>
+            </a>
           </li>
         </ul>
       </div>

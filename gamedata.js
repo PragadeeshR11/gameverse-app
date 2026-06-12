@@ -9,7 +9,7 @@ export const exploreItems = [
     title: 'Discover Worlds',
     description:
       'Dive into vast, cinematic universes filled with endless exploration, stunning environments, and unforgettable adventures across genres.',
-    img: '/gameImg/exploreimg1.png',
+    img: '/gameImg/exploreimg1.jpg',
   },
   {
     title: 'Immersive Gameplay',
@@ -146,11 +146,5 @@ export const socials = [
     icon: FaFileDownload,
     name: 'Resume',
     link: '/resume/Pragadeesh_R_React_Developer_Resume.pdf',
-  },
-  {
-    id: '4',
-    icon: LuLink,
-    name: 'LiveProject - Gameverse',
-    link: '/',
   },
 ];

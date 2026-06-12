@@ -106,14 +106,9 @@ a {
 #hero,
 #popular,
 #categories,
-#subscriptions,
-#about,
-#projects {
+#explore,
+#subscriptions {
   @apply pb-26;
-}
-
-.portfolio {
-  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16;
 }
 
 .sticky-nav {
@@ -121,8 +116,9 @@ a {
 }
 
 .sec-head {
-  @apply text-xl sm:text-2xl lg:text-4xl text-center lg:text-left font-semibold tracking-wider uppercase text-amber-50 px-4 sm:px-6 lg:px-16 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
-  font-family: 'Audiowide', sans-serif;
+  @apply text-xl sm:text-2xl lg:text-4xl text-center lg:text-left tracking-wide text-[#dee2e6] font-semibold uppercase  
+  px-4 sm:px-6 lg:px-16 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)];
+  /* font-family: 'Audiowide', sans-serif; */
 }
 
 .sub-text {

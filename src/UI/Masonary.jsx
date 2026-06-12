@@ -44,7 +44,7 @@ export function Masonarytext({ progress }) {
             transition: 'none',
           }}
         >
-          {['Biggest', 'Game', 'Collection'].map((text, i) => (
+          {['Your', 'Next', 'Adventure'].map((text, i) => (
             <div key={i} className="overflow-hidden">
               <span
                 className="block"

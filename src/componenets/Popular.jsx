@@ -1,10 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { ActiveSecCntxt } from '../context/ActiveSection.jsx';
-// import { games } from '../../gamedata.js';
-// import GameCard from '../UI/GameCard';
+import { gameAPI } from '../services/gameAPI.js';
 import Carousel from '../UI/Carousel.jsx';
 import useActiveNav from '../hooks/useActiveNav.js';
-import { gameAPI } from '../services/gameAPI.js';
 
 export default function Popular() {
   const secRef = useRef();
@@ -30,7 +27,7 @@ export default function Popular() {
     }
     loadGames();
   }, []);
-  useActiveNav(secRef, 'popular', 0.1);
+  useActiveNav(secRef, 'popular', 0.6);
 
   return (
     <section ref={secRef} id="popular" className="scroll-mt-18">

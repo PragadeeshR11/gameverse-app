@@ -49,12 +49,16 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2 lg:justify-self-start shrink-0">
-          <button
-            onClick={() => navigate('/portfolio')}
+          <a
+            href="https://portfolio-pragadeesh.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden lg:block actionBtn font-light text-gray-300 px-3 py-0.5 hover:font-normal hover:scale-[1.02]"
           >
             About Me
-          </button>
+          </a>
+
+          {/* mobile */}
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
