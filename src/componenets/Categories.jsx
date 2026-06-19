@@ -1,5 +1,5 @@
 import FlipCard from '../UI/FlipCard';
-import { useState, useEffect, useRef, use } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { genres } from '../../gamedata.js';
 import useActiveNav from '../hooks/useActiveNav.js';
 
@@ -78,9 +78,6 @@ export default function Categories() {
 
   const { index, rotation, scale, tilt } = displayState;
 
-  // CHANGE: front/back now derived from rotation directly (floor(rotation/180))
-  // instead of using `index` — fixes 2nd/3rd card overlap where index and the
-  // actual visible face fell out of sync mid-section
   const front = genres[index];
   const isLast = index === genres.length - 1;
   const back = isLast ? genres[index] : genres[index + 1];
