@@ -46,5 +46,3 @@ export default function SubCard({ plan, isAnnual }) {
     </>
   );
 }
-
-//bg-[linear-gradient(135deg,#1a071c_0%,#2a0a28_30%,#4a123d_65%,#7a1f4f_100%)]
